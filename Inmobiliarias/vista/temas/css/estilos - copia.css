@@ -1,0 +1,774 @@
+a {
+    text-decoration: none;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f7f7f7;
+    font-family: "Helvetica";
+}
+header {
+    display: inline-block;
+    float: left;
+}
+nav {
+    background: white;
+}
+#menu-anuncios li {
+    float: left;
+    list-style: none;
+    margin: 5px;
+    background-color: #F3F3F3;
+    color: #777777;
+    padding: 6px 15px 6px 15px;
+    border-radius: 14px 14px 14px 14px;
+    margin-right: 4px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-shadow: 0px 4px 5px -3px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 4px 5px -3px rgba(0,0,0,0.19);
+    box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.19);
+}
+#menu-anuncios a {
+    color: #777777;
+}
+#logo {
+    display: inline-block;
+    float: left;
+}
+#menu-anuncios {
+    float: left;
+    margin-top: 15px;
+    display: inline-block;
+    margin-left: 14%;
+}
+#menu-usuario {
+    display: inline-block;
+    float: left;
+    margin-right: 43px;
+    margin-left: 45px;
+    margin-top: 25px;
+}
+#menu-usuario li {
+    list-style: none;
+    float: left;
+}
+#menu-usuario a {
+    color: #0079BB;
+}
+#menu-vender {
+    display: inline-block;
+    margin-top: 25px;
+}
+#menu-vender li {
+    display: inline-block;
+}
+#menu-vender a {
+    box-shadow: 0 0 0 1px #31c300 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 4px 0 0 #5eb924, 0 8px 4px 1px #F1F1F1;
+    background-color: #78d739;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    font-weight: bold;
+}
+/*#menu {
+    position:relative;
+    margin:auto;
+    width:100%;
+    height:auto;
+    background-color: #0079BB;
+    border-bottom: solid 3px #005991;
+    display: inline-block;
+}
+#menu ul{
+    position:relative;
+    margin:auto;
+    width:50%;
+    text-align: center;
+}
+#menu ul li{
+    display:inline-block;
+    width:24%;
+    line-height: 50px;
+    list-style: none;
+}
+#menu ul li a{
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+}*/
+#contenedor {
+    background: white;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1152px;
+    margin-top: 50px;
+}
+/*----Contenido Inicio----*/
+#contenedor {
+    padding: 0px 20px 0px 20px;
+}
+#usuario #contenedor {
+    padding: 20px 10px 21px 30px;
+}
+#vehiculos #contenedor, #empleos #contenedor, #motos #contenedor, #inmuebles #contenedor, #crear_anuncio #contenedor  {
+    background: transparent;
+}
+#ingresar #contenedor {
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 450px;
+}
+.anuncios-inmuebles, .anuncios-autos, .anuncios-motos, .anuncios-empleos {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,.3);
+}
+.anuncios-empleos {
+    margin-right: 0px !important;
+}
+.anuncios-inmuebles img, .anuncios-autos img, .anuncios-motos img, .anuncios-empleos img {
+    width: 263px;
+    height: 235px;
+}
+#bloque-anuncios-recomendados {
+    display: inline-block;
+    width: 100%;
+}
+#bloque-contenedor-categorias {
+    width: 100%;
+    display: inline-block;
+}
+.bloque-contenido-categorias {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.categorias {
+    width: 100%;
+    max-width: 220px;
+    padding: 15px;
+    /* margin-bottom: 25px; */
+    display: inline-block;
+    float: left;
+}
+.categorias a {
+    color: #0079BB;
+    /* font-weight: bold; */
+}
+#anegociar-info {
+    display: inline-block;
+    width: 100%;
+    background: #f7f7f7;
+    margin-bottom: 35px;
+}
+.anegociar-info {
+    width: 100%;
+    max-width: 1090px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+}
+.col-sm-1 {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    max-width: 360px;
+}
+.col-sm-2 {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    max-width: 360px;
+}
+.col-sm-3 {
+    display: inline-block;
+    width: 100%;
+    max-width: 360px;
+}
+/*----Contenido Crear Anuncio----*/
+section {
+    position: relative;
+    background-image: url(../img/fondo-vender.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #f7f7f7;
+    display: inline-block;
+}
+/*
+#crear_anuncio section, #empleos section, #inmuebles section, #maquinarias section, #vehiculos section {
+    position: relative;
+    background-image: url(../imagenes/fondo-vender.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #f7f7f7;
+    display: inline-block;
+}*/
+/*----Contenido Crear Anuncio----*/
+#ingresar section, #registro section {
+    position: relative;
+    background-image: url(../img/fondo-ingresar-registrar.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #f7f7f7;
+    display: inline-block;
+}
+#consejos {
+    display: inline-block;
+    max-width: 316px;
+    padding: 0px 25px 25px 25px;
+    margin-left: 15px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+#crear-anuncio {
+    width: 100%;
+    max-width: 650px;
+    margin-right: 20px;
+    display: inline-block;
+    float: left;
+    padding: 10px 50px 10px 50px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+#crear_anuncio section form {
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+#crear-anuncio .ubicacionpais, #crear-anuncio .ubicaciondepartamento, #crear-anuncio .ubicacionprovincia, #crear-anuncio .ubicaciondistrito, #crear-anuncio .categoria, #crear-anuncio .sub-categoria, #crear-anuncio .titulo, #crear-anuncio .descripcion, #crear-anuncio .precio {
+    padding: 10px 0px 10px 0px;
+}
+#crear-anuncio select {
+    display: inline-block;
+    width: 100%;
+    max-width: 110px;
+    max-width: 159px;
+    height: 44px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    text-transform: capitalize;
+}
+#crear-anuncio input {
+    display: inline-block;
+    width: 100%;
+    max-width: 465px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#crear-anuncio label {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    width: 100%;
+    max-width: 130px;
+    display: inline-block;
+}
+.ubicacionpais {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    max-width: 255px;
+}
+#crear-anuncio .categoria select {
+    max-width: 215px;
+}
+.ubicaciondepartamento, .ubicacionprovincia, .ubicaciondistrito, .categoria, .sub-categoria {
+    display: inline-block;
+    width: 100%;
+    max-width: 168px;
+}
+#crear-anuncio .ubicaciondepartamento label, #crear-anuncio .ubicacionprovincia label, #crear-anuncio .ubicaciondistrito label, #crear-anuncio .categoria label, #crear-anuncio .sub-categoria label {
+    max-width: 0px;
+}
+#crear-anuncio .descripcion label {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    width: 100%;
+    max-width: 140px;
+    display: inline-block;
+    float: left;
+}
+.descripcion textarea#descripcioncrearanuncio {
+    display: inline-block;
+    width: 100%;
+    max-width: 465px;
+    height: 130px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#crear-anuncio .enviar {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+.enviar input#guardaranuncio {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    padding: 10px;
+}
+#arrastreImagenArticulo {
+    display: inline-block;
+}
+#arrastreImagenArticulo img.img-thumbnail {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+}
+/*=============================================
+Pagina Empleos
+=============================================*/
+
+.vista-empleos, .vista-inmuebles, .vista-vehiculos {
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 20px 20px 0px 20px;
+}
+.vista-campos {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 2px;
+}
+.vista-campo-imagen {
+    float: left;
+    width: 100%;
+    max-width: 200px;
+}
+.vista-campo-imagen .img-thumbnail {
+    width: 100%;
+    height: 150px;
+}
+.vista-campo-descripcion {
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    padding: 0px 25px 0px 25px;
+    height: 56px;
+}
+.vista-campo-precio {
+    color: #000;
+    display: inline-block;
+    width: 100%;
+    max-width: 444px;
+    padding: 0px 0px 0px 0px;
+}
+.vista-campo-precio p {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    /* font-family: 'Ubuntu', sans-serif; */
+    color: #00a651;
+}
+.vista-campo-titulo {
+    font-weight: 500;
+    color: #000;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 25px 0px 25px;
+}
+.vista-campo-titulo h1 {
+    padding: 0px;
+    text-align: left;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #000;
+}
+.vista-campos p {
+    margin: 0px;
+}
+.vista-campo-tipo-moneda {
+    display: inline-block;
+    width: 100%;
+    max-width: 30px;
+    padding: 0px 0px 0px 25px;
+    float: left;
+}
+.vista-campo-tipo-moneda p {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #00a651;
+}
+.vista-campo-precio p {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    /* font-family: 'Ubuntu', sans-serif; */
+    color: #00a651;
+}
+.vista-campo-fecha-creacion {
+    background-color: #f6f6f6;
+    border-top: 1px solid #eeeeee;
+    /* min-height: 35px; */
+    display: inline-block;
+    bottom: 0;
+    right: -1px;
+    width: 100%;
+    max-width: 574px;
+    padding-left: 25px;
+    font-size: 14px;
+}
+.vista-campo-descripcion a {
+    color: #a0a0a0;
+    font-size: 14px;
+    line-height: 17px;
+}
+.vista-campo-fecha-creacion a {
+    font-weight: 500;
+    color: #9fa4a4;
+}
+
+#clasificado {
+    width: 100%;
+    max-width: 1092px;
+    display: inline-block;
+    float: left;
+    padding: 30px 30px 30px 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.campo-imagen {
+    display: inline-block;
+    width: 100%;
+    max-width: 650px;
+    float: left;
+    margin-right: 30px;
+}
+.campo-imagen img {
+    width: 100%;
+    height: 400px;
+}
+.campo-titulo {
+    width: 100%;
+    max-width: 380px;
+    display: inline-block;
+}
+.campo-titulo h1 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #000;
+    margin: 11px 0 8px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: 389px;
+}
+.campo-tipo-moneda {
+    display: inline-block;
+    width: 100%;
+    max-width: 40px;
+    float: left;
+}
+.campo-tipo-moneda h2 {
+    color: #00a651;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+}
+.campo-precio {
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+}
+.campo-precio h2 {
+    color: #00a651;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+}
+#registro #contenedor {
+    width: 100%;
+    max-width: 500px;
+}
+/*Menu responsivo*/
+#menu-principal {
+    display: inline-block;
+    width: 100%;
+    background-color: #0079BB;
+    border-bottom: solid 3px #005991;
+    height: 53px;
+    margin-bottom: -4px;
+}
+.menu-principal {
+    margin: 0 auto;
+    max-width: 710px;
+}
+/*Strip the ul of padding and list styling*/
+#menu-principal ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position: absolute;
+}
+/*Create a horizontal list with spacing*/
+#menu-principal li {
+    display:inline-block;
+    float: left;
+    margin-right: 1px;
+}
+/*Style for menu links*/
+#menu-principal li a {
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    display:block;
+    min-width:140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    color: #fff;
+    background: #2f3036;
+    background: transparent;
+    text-decoration: none;
+}
+/*Hover state for top level links*/
+#menu-principal li:hover a {
+    background: #19c589;
+}
+/*Style for dropdown links*/
+#menu-principal li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+/*Hover state for dropdown links*/
+#menu-principal li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+/*Hide dropdown links until they are needed*/
+#menu-principal li ul {
+    display: none;
+}
+/*Make dropdown links vertical*/
+#menu-principal li ul li {
+    display: block;
+    float: none;
+}
+/*Prevent text wrapping*/
+#menu-principal li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+/*Display the dropdown on hover*/
+#menu-principal ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+/*Style 'show menu' label button and hide it by default*/
+#menu-principal .show-menu {
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: #19c589;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+/*Hide checkbox*/
+#menu-principal input[type=checkbox]{
+    display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+#menu-principal input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+/*Responsive Styles*/
+@media screen and (max-width : 760px){
+    #menu-principal {
+        height: auto;
+    }
+    /*Make dropdown links appear inline*/
+    #menu-principal ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    #menu-principal li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    #menu-principal ul li, li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    #menu-principal .show-menu {
+        display:block;
+    }
+}
+
+/*Alertas y mensajes de error*/
+#registro input {
+    /*display: inline-block;*/
+    width: 100%;
+    max-width: 465px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+span.usuario-existe p, span.email-existe p {
+    color: #e81123;
+}
+input#terminos {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    max-width: 50px;
+}
+#registro h1, #ingresar h1 {
+    color: #0072BC;
+    font-weight: 700;
+}
+
+/*=============================================
+=            Galeria Clasificados            =
+=============================================*/
+.slider{
+    width: 640px; /*Same as width of the large image*/
+    position: relative;
+    /*Instead of height we will use padding*/
+    padding-top: 320px; /*That helps bring the labels down*/
+    
+    margin: 100px auto;
+    
+    /*Lets add a shadow*/
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+/*Last thing remaining is to add transitions*/
+.slider>img{
+    position: absolute;
+    left: 0; top: 0;
+    transition: all 0.5s;
+}
+
+.slider input[name='slide_switch'] {
+    display: none;
+}
+
+.slider label {
+    /*Lets add some spacing for the thumbnails*/
+    margin: 18px 0 0 18px;
+    border: 3px solid #999;
+    
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+    /*Default style = low opacity*/
+    opacity: 0.6;
+}
+
+.slider label img{
+    display: block;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+    border-color: #666;
+    opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    transform: scale(1);
+}
+/*Clicking on any thumbnail now should activate the image related to it*/
+
+/*We are done :)*/
+
+/*Nuevas modificaciones*/
+.slider input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1.1);
+    width: 100%;
+    height: 300px;
+}
+
+.slider {
+    width: 650px;
+    position: relative;
+    padding-top: 320px;
+    margin: 0px auto;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+    float: left;
+    margin-right: 52px;
+}
+label.prueba {
+    display: none;
+}
+/*=====  End of Section comment block  ======*/

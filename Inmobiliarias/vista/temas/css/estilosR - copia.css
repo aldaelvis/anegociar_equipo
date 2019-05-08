@@ -1,0 +1,408 @@
+
+section {
+    width: 100%;
+    padding-bottom: 30px;
+}
+section h1{
+            position: relative;
+            margin: auto;
+            padding:10px;
+            text-align: center;
+        }
+        section form input{
+            display:inline-block;
+            padding:10px;
+            width:95%;
+            margin:5px;
+        }
+
+        section form input[type="submit"]{
+            position:relative;
+            margin:20px auto;
+            left:4.5%;
+
+        }
+
+        table{
+            position:relative;
+            margin:auto;
+            width:100%;
+            left:-10%;
+        }
+
+        table thead tr th{
+            padding:10px;
+        }
+
+        table tbody tr td{
+            padding:10px;
+        }
+footer {
+    position: absolute;
+    width: 100%;
+    /*display: inline-block;*/
+    background-color: #e3e6e9;
+    padding: 0;
+    border-top: 1px solid #eceff1;
+    /*outline: 1px solid #c5c5c5;*/
+}
+#block-block-1 {
+    float: left;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+#block-block-2 {
+    display: inline-block;
+}
+#copyright {
+    width: 100%;
+    background: #000;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 15px;
+}
+/*Popup*/
+/*
+body {
+  font-family: Arial, sans-serif;
+  background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
+}
+*/
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+aside img {
+    width: 100%;
+    height: 500px;
+}
+#something-sell {
+    background-image: url('../img/subfooter.jpg');
+    padding: 40px 0 60px;
+}
+.col-sm-12.text-center {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 14px;
+    color: white;
+    text-align: center;
+}
+a.btn.btn-primary {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    background-color: #00a651;
+    padding: 10px 40px 10px 30px;
+    border: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+/*=============================================
+SLIDE            
+=============================================*/
+
+#slide{
+	position: relative;	
+    margin: auto;
+	margin-bottom:-50px;
+	overflow:hidden;
+	background:white;
+}
+
+/*Photo Slide*/
+
+#slide ul li{
+	float: left;
+	width: 25%;
+	display:none;
+}
+
+#slide ul li:first-child{
+	display:block;
+}
+
+#slide ul li img{
+	width: 100%;
+}
+
+#slide ul li .slideCaption{
+	position:relative;
+	width:100%;
+	top:-95px;
+	text-align:center;
+	z-index:1;
+	color:white;
+	background: rgba(0,0,0,.5);
+}
+
+.slideCaption h3{
+	padding-top:10px;
+}
+
+.slideCaption p{
+	padding-bottom:10px;
+}
+
+/*Indicadores Slide*/
+
+#indicadores{
+	position: relative;
+	width: 100%;
+	margin:auto;
+	height: 0px;
+	top: -90px;
+	text-align: center;
+}
+
+#indicadores li{
+	display:inline-block;
+	margin:0px 5px;
+	cursor: pointer;
+	opacity: .5;
+	color: white;
+	text-shadow: 0px 0px 5px #333;
+}
+
+#indicadores li:first-child{
+	opacity: 1;
+}
+
+/*=====  Fin de SLIDE  ======*/
+
+h3 {
+    border-bottom: 1px solid #f2f2f2;
+    color: #000;
+    font-size: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+
+.inm_index_trans {
+                                margin: 10px 0px 0px 0px;
+                            }
+                            .inm_index_trans img {
+                                border: dashed 2px #00A29C;
+                            }
+                            .inm_index_trans img:hover {
+                                border: solid 2px #00A29C;
+                            }
+                            .inm_index_trans a {
+                                font-size: 12px;
+                                font-weight: normal;
+                                color: #1F9DC2;
+                            }
+                            .inm_index_trans h5 {
+                                font-weight: bold;
+                                color: #00534F;
+                                font-size: 14px;
+                                font-weight: normal;
+                                margin: 5px 0px 0px 0px;
+                            }
+                            .type_links {
+                                border: solid 2px #FFF;
+                                margin: 9px 0px 0px 0px;
+                            }
+                            .type_links:hover {
+                                border: solid 2px #E2574C;
+                            }
+
+
+/*@media screen and (max-width:480px) {*/
+@media (max-width:320px){
+    #header {
+        width: 100%;
+    }
+    #logo {
+        width: 100%;
+    }
+    #logo img {
+        width: 100%;
+    }
+    #inicio #contenido {
+        padding: 0px;
+    }
+    #contenedor {
+        margin-top: 10px;
+        padding: 0px;
+    }
+    #menu-vender {
+        display: inline-block;
+        margin-top: 25px;
+        margin-bottom: 28px;
+        width: 100%;
+        text-align: center;
+    }
+    #menu-principal {
+        height: auto;
+    }
+    .anuncios-inmuebles, .anuncios-autos, .anuncios-motos, .anuncios-empleos {
+        width: 100%;
+        display: inline-block;
+        float: left;
+        margin-right: 20px;
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,.3);
+    }
+    .anuncios-inmuebles img, .anuncios-autos img, .anuncios-motos img, .anuncios-empleos img {
+        width: 100%;
+        height: 235px;
+    }
+    .categorias {
+        width: 82%;
+        display: inline-block;
+        max-width: 100%;
+        padding: 0px;
+        margin-left: 18%;
+    }
+    .single-cta {
+        margin: 0 auto;
+        max-width: 250px;
+        padding-top: 20px;
+    }
+    .anegociar-info {
+        width: 100%;
+        max-width: 100% !important;
+        padding: 0px;
+    }
+    .vista-empleos, .vista-inmuebles, .vista-vehiculos {
+    padding: 0px;
+}
+    .vista-campo-titulo {
+        padding: 0px;
+}
+.vista-campo-descripcion {
+    padding: 0px;
+}
+.vista-campo-fecha-creacion {
+    padding-left: 0px;
+}
+.vista-campo-imagen {
+    float: left;
+    width: 100%;
+    max-width: 100%;
+}
+.vista-campo-imagen .img-thumbnail {
+    width: 100%;
+    height: 180px;
+}
+.vista-campo-titulo h1 {
+    text-align: center;
+}
+.vista-campo-tipo-moneda {
+    display: inline-block;
+    width: 100%;
+    max-width: 30px;
+    padding: 0px;
+    float: left;
+    margin-left: 35%;
+}
+.vista-campo-precio {
+    color: #000;
+    display: inline-block;
+    width: auto;
+    max-width: auto;
+    padding: 0px 0px 0px 0px;
+}
+.vista-campos {
+    margin-bottom: 20px;
+}
+.vista-campo-descripcion {
+    height: 25px;
+}
+}

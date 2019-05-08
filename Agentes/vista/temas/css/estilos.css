@@ -1,0 +1,1478 @@
+/* comm-section + tab */
+/*================================================
+=            Pagina Principal Agentes            =
+================================================*/
+#bloque-principal-agente {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0px auto;
+}
+
+.bloque-principal-agente {
+    background: white;
+    padding: 30px;
+}
+
+.bloque-bienvenida h2 {
+    margin-top: 0px;
+}
+
+/*=====  End of Pagina Principal Agentes  ======*/
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f7f7f7;
+    font-family: "Helvetica";
+}
+
+header {
+    display: inline-block;
+    /* float: left; */
+    padding: 5px 10px 5px 10px;
+    background: white;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 148px;
+    box-shadow: 0 2px 0px rgba(0, 0, 0, .08);
+}
+
+#logo img {
+    width: 100%;
+}
+
+nav {
+    background: white;
+    width: 100%;
+    height: 53.6px;
+    /*max-width: 1314px;*/
+    display: inline-block;
+    box-shadow: 0 2px 0px rgba(0, 0, 0, .08);
+    /*margin-left: -5px;*/
+
+}
+
+#menu-principal {
+    display: inline-block;
+}
+
+.menu-principal ul {
+    list-style: none;
+}
+
+.menu-principal li {
+    /* padding-top: 22px; */
+    /* padding-bottom: 22px; */
+    line-height: 22px;
+    display: inline-block;
+    padding-right: 40px;
+}
+
+.menu-principal a {
+    color: #76838f;
+}
+
+#menu-agente {
+    display: inline-block;
+    float: right;
+    /* right: 200px; */
+    position: relative;
+    /* margin-right: 30px; */
+    /* padding: 0px 15px 0px 15px; */
+}
+
+.menu-usuario-agente ul {
+    display: flex;
+    padding: 0;
+    /*margin: 0;*/
+    list-style: none;
+}
+
+a.menu-hola {
+    padding: 25px 20px 23px 20px;
+    margin-top: -25px;
+}
+
+li.divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: #e4eaec;
+}
+
+a.enlace-micuenta, a.enlaca-salir {
+    padding: 10px 20px 10px 20px;
+}
+
+a.enlace-micuenta:hover, a.enlaca-salir:hover {
+    color: #76838f;
+    background-color: #f3f7f9;
+}
+
+.menu-usuario-agente a {
+    display: block;
+    /*background-color: #F9B53C;*/
+    text-decoration: none;
+    color: #191C26;
+}
+
+.menu-usuario-agente a:hover {
+    /*background-color: #CC673B;*/
+}
+
+.menu-usuario-agente ul li ul {
+    display: none;
+}
+
+.menu-usuario-agente ul li a:hover + ul, .menu-usuario-agente ul li ul:hover {
+    display: block;
+    border: 1px solid #e4eaec;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: white;
+}
+
+/*
+/-Convientre un boton en enlace-/
+.btn-link{
+  border:none;
+  outline:none;
+  background:none;
+  cursor:pointer;
+  color:#0000EE;
+  padding:0;
+  text-decoration:underline;
+  font-family:inherit;
+  font-size:inherit;
+}
+*/
+/*
+#bloque-elije-tipo-clasificado {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    background: white;
+}
+.bloque-elije-tipo-clasificado {
+    padding: 10px 30px 10px 30px;
+}
+.categoria {
+    display: inline-block;
+    padding: 10px 85px 20px 85px;
+}
+*/
+
+
+/*=============================================
+=      Pagina elige tipo de clasificado       =
+=============================================*/
+#bloque-elije-tipo-clasificado {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    /*background: white;*/
+}
+
+.bloque-elije-tipo-clasificado {
+    padding: 10px 30px 10px 30px;
+    background: white;
+}
+
+.elije-tipo-anuncio {
+    width: 100%;
+    max-width: 807px;
+    margin: auto;
+}
+
+.elije-tipo-anuncio h1, .otras-categorias h1 {
+    color: #005980;
+    text-align: center;
+}
+
+.categoria {
+    display: inline-block;
+    padding: 10px 85px 20px 85px;
+    text-align: center;
+}
+
+.imagen-tipo-anuncio button.btn-link {
+    border: none;
+    background: transparent;
+}
+
+.imagen-tipo-anuncio button.btn-link:hover {
+    cursor: pointer;
+}
+
+.titulo-tipo-anuncio a {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    padding: 8px 15px 8px 15px;
+    border-radius: 4px;
+}
+
+.titulo-tipo-anuncio button.btn-link {
+    font-weight: 400;
+    text-transform: capitalize;
+    background-color: #00a651;
+    padding: 8px 10px 8px 10px;
+    border: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
+
+.titulo-tipo-anuncio button.btn-link:hover {
+    cursor: pointer;
+}
+
+.otras-categorias {
+    width: 100%;
+    max-width: 363px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.otras-categorias select.nombrecategoria {
+    display: inline-block;
+    max-width: 433px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.otras-categorias button.btn-link {
+    font-weight: 400;
+    text-transform: capitalize;
+    background-color: #00a651;
+    padding: 8px 30px 6px 30px;
+    border: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
+
+/*=====  End of Section comment block  ======*/
+
+/*=============================================
+=          Pagina crear clasificado          =
+=============================================*/
+.crear-anuncio-ingreso-registro {
+    background-color: #f4f8fa;
+    padding: 20px;
+    border-left: 3px solid #eee;
+    border-color: #5bc0de;
+    margin-bottom: 20px;
+}
+
+.crear-anuncio-ingreso-registro h2 {
+    margin-top: 0px;
+}
+
+.crear-anuncio-ingreso, .crear-anuncio-registro {
+    display: inline-block;
+    text-align: center;
+    padding: 0px 0px 0px 85px;
+}
+
+.crear-anuncio-ingreso a, .crear-anuncio-registro a {
+    padding: 5px 15px 5px 15px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+#bloque-contenido-crear-clasificados {
+    width: 100%;
+    max-width: 1152px;
+    margin: auto;
+}
+
+.bloque-contenido-crear-clasificados {
+    display: inline-block;
+    width: 100%;
+}
+
+#consejos {
+    display: inline-block;
+    max-width: 316px;
+    padding: 0px 25px 25px 25px;
+    margin-left: 15px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+#crear-anuncio {
+    width: 100%;
+    max-width: 650px;
+    margin-right: 20px;
+    display: inline-block;
+    float: left;
+    padding: 10px 50px 10px 50px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#crear_anuncio section form {
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+#crear-anuncio .ubicacionpais, #crear-anuncio .ubicaciondepartamento, #crear-anuncio .ubicacionprovincia, #crear-anuncio .ubicaciondistrito, #crear-anuncio .categoria, #crear-anuncio .sub-categoria, #crear-anuncio .titulo, #crear-anuncio .descripcion, #crear-anuncio .precio {
+    padding: 10px 0px 10px 0px;
+}
+
+#crear-anuncio select {
+    display: inline-block;
+    width: 100%;
+    max-width: 110px;
+    max-width: 159px;
+    height: 44px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    text-transform: capitalize;
+}
+
+#crear-anuncio input {
+    display: inline-block;
+    width: 100%;
+    max-width: 465px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#crear-anuncio label {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    width: 100%;
+    max-width: 130px;
+    display: inline-block;
+}
+
+.categoria input {
+    background: #EBEBE3 !important;
+    max-width: 138px !important;
+}
+
+.subcategoria {
+    display: inline-block;
+    width: 100%;
+    max-width: 168px;
+}
+
+.ubicacionpais {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    max-width: 255px;
+}
+
+#crear-anuncio .categoria select {
+    max-width: 215px;
+}
+
+#crear-anuncio .ubicaciondepartamento, #crear-anuncio .ubicacionprovincia, #crear-anuncio .ubicaciondistrito, #crear-anuncio .categoria, #crear-anuncio .sub-categoria, #crear-anuncio .tipo-categoria-detalles, #crear-anuncio .tipocombustible, #crear-anuncio .tipotransmision, #crear-anuncio .condicion-usado, #crear-anuncio .condicion-nuevo, #crear-anuncio .condicion-kilometraje {
+    display: inline-block;
+    width: 100%;
+    max-width: 168px;
+}
+
+#crear-anuncio .ubicaciondepartamento label, #crear-anuncio .ubicacionprovincia label, #crear-anuncio .ubicaciondistrito label, #crear-anuncio .categoria label, #crear-anuncio .sub-categoria label {
+    max-width: 0px;
+}
+
+#crear-anuncio .descripcion label {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    width: 100%;
+    max-width: 140px;
+    display: inline-block;
+    float: left;
+}
+
+.descripcion textarea#descripcioncrearanuncio {
+    display: inline-block;
+    width: 100%;
+    max-width: 465px;
+    height: 130px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.mostrar-en-revista {
+    margin-bottom: 15px;
+}
+
+.opcion-mostar-en-revista {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    width: 100%;
+    max-width: 110px;
+}
+
+.opcion-mostar-en-revista label {
+    max-width: 25px !important;
+}
+
+.descripcion-revista {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.descripcion-revista label {
+    display: none !important;
+}
+
+.si-mostar-en-revista, .no-mostar-en-revista {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    max-width: 50px;
+}
+
+.si-mostar-en-revista input#yesCheck, .no-mostar-en-revista input#noCheck {
+    max-width: 20px;
+    margin: 0px;
+    height: 25px;
+    vertical-align: inherit;
+}
+
+.imagen-mostar-en-revista img {
+    width: 100%;
+    max-width: 110px;
+}
+
+.descripcion-revista textarea#descripcionrevistacrearanuncio {
+    width: 100%;
+    max-width: 336px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.contador.palabras {
+    color: red;
+    font-size: 12px;
+    text-align: right;
+    /*margin-right: 30px;*/
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.gallery img {
+    width: 175px;
+    height: 105px;
+    padding: 0px 5px 0px 5px;
+}
+
+#crear-anuncio .enviar {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.enviar input#guardaranuncio {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    padding: 10px;
+}
+
+.condicion-vehiculo {
+    padding-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#crear-anuncio .condicion-vehiculo .tipocombustible input, .condicion-vehiculo .tipotransmision input, .condicion-vehiculo .condicion-usado input, .condicion-vehiculo .condicion-nuevo input {
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    padding: 0px !important;
+    font-size: initial !important;
+    line-height: normal !important;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0px !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#crear-anuncio .condicion-nuevo, #crear-anuncio .condicion-usado {
+    display: inline-block;
+    width: 100%;
+    max-width: 144px;
+}
+
+#crear-anuncio .condicion-nuevo label, #crear-anuncio .condicion-usado label {
+    width: auto;
+    max-width: none;
+}
+
+.tipos-secciones {
+    margin-bottom: 20px;
+}
+
+.tipoinmueble {
+    display: inline-block;
+}
+
+.tiposeccion {
+    display: inline-block;
+}
+
+.numerohabitaciones {
+    display: inline-block;
+    width: 1000%;
+    max-width: 171px;
+}
+
+.numerocuartosbaños {
+    display: inline-block;
+    width: 100%;
+    max-width: 167px;
+}
+
+.numerocuadrados {
+    display: inline-block;
+    width: 122px;
+}
+
+#crear-anuncio .numerohabitaciones label, #crear-anuncio .numerocuartosbaños label, #crear-anuncio .numerocuadrados label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.marca-modelo label {
+    vertical-align: middle;
+}
+
+.marcas, .modelos {
+    display: inline-block;
+    width: 160px;
+}
+
+.año {
+    display: inline-block;
+    width: 100px;
+    margin-left: 25px;
+}
+
+#crear-anuncio .precio input {
+    width: 100%;
+    max-width: 300px !important;
+}
+
+/*=====  End of Section comment block  ======*/
+
+
+/*=============================================
+=         Pagina elije plan clasificdo        =
+=============================================*/
+#bloque-elije-plan-clasificado {
+    width: 100%;
+    max-width: 1120px;
+    margin: auto;
+    background: transparent;
+}
+
+.planes-anuncio {
+    background: white;
+    margin: 0px 10px 0px 10px;
+    display: inline-block;
+    width: 100%;
+    max-width: 220px;
+    padding: 0px 20px 0px 20px;
+    vertical-align: top;
+    padding-bottom: 10px;
+}
+
+.categoria-plan h1 {
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.enlace-crear-anuncio {
+    /* padding: 5px 15px; */
+    margin-top: 30px;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.enlace-crear-anuncio button.btn-link {
+    font-weight: 400;
+    text-transform: capitalize;
+    background-color: #00a651;
+    padding: 10px 42px 10px 42px;
+    border: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.descripcion-plan {
+    min-height: 205px;
+}
+
+.descripcion-plan ul {
+    padding-left: 20px;
+}
+
+.enlace-crear-anuncio {
+    /* padding: 5px 15px; */
+    margin-top: 30px;
+    font-size: 14px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.nombre-plan {
+    background-image: url(../img/fondo-tipo-plan.png);
+    display: inline-block;
+    width: 150px;
+    height: 130px;
+    position: relative;
+    top: -34px;
+    right: -90px;
+    /* padding-top: 16px; */
+}
+
+.nombre-plan h2 {
+    color: #fff;
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    transform: rotate(40deg);
+    font-size: 14px;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.categoria-plan {
+    margin-top: 45px;
+    margin-bottom: -32px;
+}
+
+.precio-plan {
+    margin-top: -85px;
+}
+
+.precio-plan h3 {
+    font-size: 60px;
+    font-weight: 300;
+    margin-top: 0;
+    line-height: 90px;
+    margin-bottom: 30px;
+}
+
+.error {
+    margin-top: 16px;
+    background: #F2DEDE;
+    color: #B94A48;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.mostrar-info {
+    width: 30%;
+    border: 1px solid #ddd;
+    height: auto;
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.mostrar-info .mostrar-info_titulo {
+    text-align: center;
+    font-weight: bold;
+}
+
+.mostrar-info .mostrar-info_img {
+    width: 96%;
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+.mostrar-info .mostrar-info_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.mostrar-info .mostrar-info_float {
+    position: relative;
+    width: 90%;
+    margin: -30px auto 0 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mostrar-info .mostrar-info_float .codigo {
+    float: left;
+    color: red;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff,
+    0 -2px 0 #fff, 1px 1px #fff,
+    -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.mostrar-info .mostrar-info_float .precio {
+    float: right;
+    color: #000;
+    text-shadow: 2px 0 0 #fbde4a, -2px 0 0 #fbde4a, 0 2px 0 #fbde4a,
+    0 -2px 0 #fbde4a, 1px 1px #fbde4a,
+    -1px -1px 0 #fbde4a, 1px -1px 0 #fbde4a, -1px 1px 0 #fbde4a;
+}
+
+.mostrar-info .mostrar-info_descripcion {
+    width: 96%;
+    margin: 40px auto 10px;
+}
+
+.mostrar-info .ubicacion {
+    position: relative;
+    transform: rotate(-90deg);
+    width: 30%;
+    height: auto;
+    top: -200px;
+    /*left: 260px;*/
+}
+
+.mostrar-info .ubicacion span {
+    color: red;
+    font-size: 16px;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff,
+    0 -2px 0 #fff, 1px 1px #fff,
+    -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.mostrar-info .mostrar-revista {
+    width: 60%;
+}
+
+.mostrar-info .imagen {
+    width: 40%;
+    height: auto;
+}
+
+.mostrar-info .imagen img {
+    width: 100%;
+    height: auto;
+}
+
+.mostrar-info .imagen_simple {
+    filter: grayscale(100%);
+}
+
+.mostrar-info_gratis {
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    height: auto;
+    padding: 5px;
+    width: 30%;
+}
+
+.mostrar-info_inmueble-destacado {
+    height: auto;
+    width: 30%;
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.mostrar-info_inmueble-destacado .cuadro_destacado {
+    border: 5px solid #000;
+}
+
+/*=====  End of Section comment block  ======*/
+/*=============================================
+=                Pagina Ingreso               =
+=============================================*/
+body#ingreso {
+    /*background-image: linear-gradient(to bottom, #62a8ea 0%, #3583ca 100%);*/
+    animation-duration: 0.8s;
+    opacity: 1;
+    background-color: rgb(39, 40, 33);
+}
+
+body#ingreso section {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    /*height: 50%;*/
+    height: 60%;
+    margin: auto;
+}
+
+body#ingreso footer {
+    display: none;
+}
+
+#logo-ingreso {
+    text-align: center;
+}
+
+#bloque-contenedor-ingreso {
+    width: 1000%;
+    /*max-width: 500px;*/
+    max-width: 400px;
+    background: white;
+    margin: 0 auto;
+}
+
+.bloque-ingreso h1 {
+    color: #0072BC;
+    font-weight: 700;
+    text-align: center;
+}
+
+.bloque-ingreso {
+    padding: 15px 20px 15px 20px;
+}
+
+.bloque-ingreso input {
+    /* display: inline-block; */
+    width: 100%;
+    /*max-width: 433px;*/
+    max-width: 335px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.boton-enviar-ingreso {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.bloque-ingreso .boton-enviar-ingreso input {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    padding: 10px;
+}
+
+.bloque-ingreso .boton-enviar-ingreso input:hover {
+    cursor: pointer;
+}
+
+/*=====  End of Section comment block  ======*/
+
+/*=============================================
+=           Pagina Cuenta de Usuario          =
+=============================================*/
+.menu-usuario li {
+    list-style: none;
+    text-align: right;
+}
+
+.usuario li {
+    float: left;
+    padding: 5px 10px 5px 10px;
+}
+
+.menu-usuario {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.usuario a {
+    color: #0079BB;
+}
+
+.menu-categorias-destacadas {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    right: 100px;
+}
+
+.menu-vender {
+    display: inline-block;
+    position: relative;
+    left: 50px;
+}
+
+.bloque-usuario {
+    width: 100%;
+    max-width: 1140px;
+    background: white;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.contenido-usuario {
+    padding: 20px;
+}
+
+.imagen-usuario {
+    display: inline-block;
+}
+
+.imagen-usuario img {
+    width: 100px;
+}
+
+.informacion-usuario {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.configuracion-usuario {
+    border-top: 1px solid #f5f5f5;
+    margin-top: 10px;
+}
+
+.configuracion-usuario ul {
+    /* border-top: 1px solid #f5f5f5; */
+    margin-bottom: 0px;
+}
+
+.configuracion-usuario li {
+    display: inline-block;
+}
+
+.bloque-contenido-usuario-clasifiados {
+    width: 100%;
+    max-width: 845px;
+    margin: 0 auto;
+}
+
+.bloque-usuario-clasifiados {
+    background: white;
+    padding: 20px;
+}
+
+div#bloque-contenido-usuarios {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0px auto;
+}
+
+div#bloque-contenido-usuarios h1.page-title {
+    margin-left: 115px;
+}
+
+/*=====  End of Section comment block  ======*/
+/*=============================================
+=  Pagina mostrar clasificados por categorias =
+=============================================*/
+#bloque-contenido-clasificados-categorias {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.bloque-ubicaciones-categoria {
+    width: 100%;
+    max-width: 1080px;
+    height: 257px;
+    margin: 0 auto;
+    /*background: white;*/
+    height: 100%;
+}
+
+.ubicaciones-categoria {
+    /*padding: 10px 30px 10px 30px;*/
+}
+
+.ubicaciones-por-anuncio {
+    display: inline-block;
+    vertical-align: top;
+    background: white;
+    padding: 20px;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 175px;
+    /* text-align: center; */
+}
+
+.bloque-marcas-por-categoria {
+    width: 100%;
+    max-width: 1080px;
+    height: 257px;
+    margin: 0 auto;
+    background: white;
+    margin-bottom: 30px;
+}
+
+.marcas-por-categoria {
+    display: inline-block;
+    width: 100%;
+    max-width: 1020px;
+    /* height: 100%; */
+    padding: 10px 30px 10px 30px;
+}
+
+.anuncios-por-categorias {
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    /* text-align: center; */
+    padding-top: 20px;
+    /* margin: 0 auto; */
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.bloque-lista-clasificados {
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-color: #ddd;
+    border: solid 2px #CFD8DC;
+}
+
+.lista-clasificados-campos {
+    padding: 5px;
+}
+
+.campo-imagen {
+    display: inline-block;
+    width: 100%;
+    max-width: 225px;
+    height: 150px;
+    /* vertical-align: top; */
+    float: left;
+}
+
+.campo-imagen img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.campo-titulo {
+    display: inline-block;
+    width: 100%;
+    max-width: 355px;
+    padding: 20px 0px 0px 20px;
+    padding: 5px 0px 0px 20px;
+}
+
+.campo-titulo a:hover {
+    text-decoration: underline;
+}
+
+.campo-titulo h4 {
+    margin: 0px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    /* font-weight: 500; */
+    color: #000;
+}
+
+.campo-codigo-revista {
+    display: inline-block;
+    width: 100%;
+    max-width: 185px;
+    vertical-align: top;
+    font-size: 0.85em;
+    display: inline-block;
+    color: #FFFFFF;
+    padding: 5px 0px 5px 0px;
+    background: #456FB2;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    text-align: center;
+}
+
+.campo-codigo-revista a {
+    color: white;
+}
+
+.campo-tipo-moneda {
+    display: inline-block;
+    padding: 0px 0px 0px 20px;
+}
+
+.campo-precio {
+    display: inline-block;
+}
+
+.campo-precio-condicion {
+    display: inline-block;
+}
+
+.campo-tipo-moneda a, .campo-precio a, .campo-precio-condicion a {
+    color: #00a651;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.campo-tipo-moneda p, .campo-precio p, .campo-precio-condicion p, .campo-descripcion p, .campo-fecha-creacion p {
+    margin: 0px;
+    word-wrap: break-word;
+}
+
+.campo-descripcion {
+    display: inline-block;
+    width: 100%;
+    max-width: 545px;
+    padding: 0px 0px 0px 20px;
+    min-height: 64px;
+    max-height: 64px;
+    display: table;
+}
+
+.campo-descripcion a {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.campo-descripcion p {
+    width: 100%;
+    max-width: 544px;
+}
+
+.campo-fecha-creacion {
+    background-color: #f6f6f6;
+    border-top: 1px solid #eeeeee;
+    width: 100%;
+    max-width: 565px;
+    min-height: 35px;
+    display: table;
+}
+
+.campo-fecha-creacion a {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.opciones-publicaciones {
+    float: right;
+    display: inline-flex;
+    align-items: center;
+}
+
+.opciones-publicaciones .activar {
+    color: #D73925;
+}
+
+/*=====  End of Section comment block  ======*/
+/*===========================================
+=            Pagina Saldo Agente            =
+===========================================*/
+div#bloque-saldo-agente {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0px auto;
+}
+
+.saldo-agente {
+    background: white;
+    padding: 20px 20px 20px 20px;
+}
+
+.bloque-recargar {
+    padding: 20px;
+}
+
+/*=====  End of Pagina Saldo Agente  ======*/
+#mensaje {
+    padding: 0px 15px 0px 15px;
+    /* margin-bottom: 20px; */
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.mensaje {
+    padding: 25px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    text-align: center;
+}
+
+/*========================================
+=            Pagina Principal            =
+========================================*/
+.enlace-recarga-saldo button.btn-link {
+    color: #fff;
+    background-color: #46be8a;
+    padding: 6px 15px;
+    font-size: 14px;
+    line-height: 1.57142857;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
+    -o-transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
+    transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
+}
+
+.enlace-recarga-saldo {
+    display: inline-block;
+    float: right;
+}
+
+
+/*=====  End of Pagina Principal  ======*/
+/* comm-section + tab */
+
+/*==== ULTIMOS MOVIMIENTOS ====*/
+
+
+/*==== ./ULTIMOS MOVIMIENTOS ====*/
+.contenedor-movimientos {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.common-table {
+    width: 100%;
+    font-size: 14px;
+    color: #8e8f90;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.common-table th {
+    font-size: 12px;
+    text-align: left;
+    font-weight: 700;
+    padding: 8px 1px;
+    background-color: #eee;
+}
+
+.buscador-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-buscador input {
+    padding: 4px;
+    border: 1px solid #d2d6de;
+    margin: 15px 0;
+    float: right;
+}
+
+.contenedor-buscador input:focus {
+    outline: 0;
+    border-color: #3c8dbc;
+    box-shadow: none;
+}
+
+/*==== Paginacion Global ====*/
+.paginacion {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    justify-content: center;
+}
+
+.page-item::after, ::before {
+    box-sizing: border-box;
+}
+
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .2rem .65rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/*==== .Paginacion Global ====*/
+
+/*==== Estilos Globales ====*/
+footer {
+    /*position: fixed;*/
+    width: 100%;
+    text-align: center;
+}
+
+/* Items */
+.placa {
+    background: #6C757D;
+    color: #fff;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 160px;
+    z-index: 1;
+    border: 1px solid #ddd;
+    opacity: 0.9;
+}
+
+.dropdown-content > a {
+    color: #337AB7;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block !important;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    margin-top: 6px;
+    border: none;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    /*width: 100px;*/
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-success {
+    background-color: #f4f4f4;
+    color: #000;
+    border-color: #ddd;
+}

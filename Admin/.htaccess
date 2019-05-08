@@ -1,0 +1,16 @@
+#Impedir que se pueda ver el listado de contenidos de un directorio
+
+Options All -Indexes
+
+#URLS AMIGABLES
+# Activar RewriteEngine
+
+RewriteEngine on
+
+RewriteRule ^(\w+)$ index.php?action=$1&id=$2
+
+#Options +FollowSymLinks
+#RewriteEngine on
+#RewriteRule (.*)-rol-(.*)\.html$ index.php?action=$1&rol=$2					
+#RewriteRule index-action-(.*)-rol-(.*)-id-(.*)\.htm$ index.php?action=$1&rol=$2&id=$3					
+				

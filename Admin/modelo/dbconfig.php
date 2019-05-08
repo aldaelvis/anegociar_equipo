@@ -1,0 +1,31 @@
+<?php
+
+$DB_host = "anegociar.com.pe";
+$DB_user = "anegociarcom_Admin";
+$DB_pass = "ZBQCn;_VfX=W";
+#$DB_pass = "root1234";
+#$DB_pass = "ZBQCn;_VfX=W";
+$DB_name = "anegociarcom_BDAnegociar";
+
+/*
+try
+{
+	$DB_con = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
+	$DB_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+	$e->getMessage();
+}
+*/
+
+try 
+{
+	$DB_con = new PDO('mysql:host=anegociar.com.pe;dbname=anegociarcom_BDAnegociar;charset=utf8', 'anegociarcom_Admin', 'ZBQCn;_VfX=W');
+
+}
+catch (PDOException $e) 
+{
+    echo 'Error: ' . $e->getMessage();
+    exit();
+}

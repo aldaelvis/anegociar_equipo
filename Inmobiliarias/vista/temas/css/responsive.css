@@ -1,0 +1,555 @@
+/*=============================================
+=            Categorias                      =
+=============================================*/
+.contenido-categorias-destacadas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.title_categoria{
+    text-align: center;
+}
+.title_categoria, .v{
+    padding-top: 30px;
+}
+
+.bloque-contenedor-categoria-vehiculos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bloque-lista-clasificados{
+    margin-left: 5px;
+}
+
+.contenido-categorias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.anegociar-categorias-subcategorias{
+    width: 30%;
+    justify-content: center;
+}
+
+.categorias-subcategorias{
+    
+    max-width: 1200px;
+}
+/*=============================================
+=   bloque contenido crear clasificado        =
+=============================================*/
+
+.bloque-contenido-crear-clasificados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*=============================================
+=            Formulario ingreso               =
+=============================================*/
+
+.bloque-ingreso .formulario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.bloque-ingreso .formulario input[type="text"],
+.bloque-ingreso .formulario input[type="password"]{
+    width: 90%;
+}
+.bloque-ingreso .formulario .boton_formulario {
+    margin: auto;
+    margin-top: 15px; 
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    padding: 10px;
+}
+/*=============================================
+=            Formulario registro              =
+=============================================*/
+
+.bloque-registro .formulario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.bloque-registro .formulario input[type="text"],
+.bloque-registro .formulario input[type="password"],
+.bloque-registro .formulario input[type="email"]{
+    width: 90%;
+}
+
+.bloque-registro .boton-enviar-registro input {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*=============================================
+=            Formulario crear anuncio         =
+=============================================*/
+.preciotipocrearanuncio {
+    margin-top: 10px;
+}
+.tipomoneda {
+    margin-top: 10px;
+}
+
+/*=============================================
+=            Footer                           =
+=============================================*/
+
+
+#footer {
+    width: 100%;
+    background-color: #e3e6e9;
+    padding: 0;
+    border-top: 1px solid #eceff1;
+    /* outline: 1px solid #c5c5c5; */
+}
+
+
+.sub-footer {
+    max-width: 1020px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* --------------------------------------- */
+
+
+.anegociar-detalles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anegociar-detalles .anegociar-content{
+    width: 23%;
+    text-align: center;
+}
+
+/* --------------------------------------- */
+.title_informacion{
+    text-align: center;
+}
+.anegociar-servicios-informacion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.anegociar-servicios-informacion .anegociar-informacion-content{
+    width: 30%;
+
+}
+
+/*=============================================
+=            Categorias           =
+=============================================*/
+
+.ubicaciones-categoria{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/*=============================================
+=            Categorias-Destacadas            =
+=============================================*/
+
+@media screen and (max-width: 500px){
+    .anegociar-categorias-subcategorias{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px){
+    .anegociar-categorias-subcategorias{
+        display: flex;
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width: 670px) {
+    .contenido-categorias-destacada{
+        flex-wrap: wrap-reverse;
+    }
+
+    .anegociar-categorias-destacadas{
+        width: 246px;
+        align-content: space-between;
+    }
+    
+}
+/*=============================================
+=            Bloque-Contenedor-ingreso        =
+=============================================*/
+
+@media  screen and (max-width: 500px)
+{
+    #bloque-contenedor-ingreso{
+        width: 90%;
+    }
+    .anegociar-detalles .anegociar-content{
+        width: 100%;
+        text-align: center;
+    }
+    .anegociar-servicios-informacion .anegociar-informacion-content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .anegociar-enlaces-servicios-img{
+        width: 70%;
+        margin-left: 60px;
+    }
+
+    
+}
+/*=============================================
+=            Bloque-Contenedor-registro       =
+=============================================*/
+@media  screen and (max-width: 500px)
+{
+    #bloque-contenedor-registro{
+        width: 90%;
+    }
+    
+}
+
+@media  screen and (min-width: 500px)
+{
+    #bloque-contenedor-ingreso{
+        width: 80%;
+    }
+    .anegociar-detalles .anegociar-content{
+        width: 25%;
+    }
+    .anegociar-servicios-informacion .anegociar-informacion-content{
+        width: 30%;
+    }
+    .anegociar-aplicaciones .anegociar-enlaces-servicios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+
+}
+
+/*=============================================
+=   bloque contenido crear clasificado        =
+=============================================*/
+
+@media screen and (min-width:200px) and (max-width: 479px) {
+    #crear-anuncio {
+        margin: 20px 0;
+    }
+    .crear-anuncio-ingreso {
+        padding: 0;
+        text-align: left;
+    }
+    .crear-anuncio-registro {
+        padding: 0;
+        text-align: left;
+    }
+    #consejos {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+}
+@media screen and (min-width:480px) and (max-width: 1200px) {
+    #crear-anuncio {
+        margin: 0 auto;
+    }
+    .crear-anuncio-ingreso {
+        padding: 0;
+        text-align: center;
+        margin: 10px;
+    }
+    .crear-anuncio-registro {
+        padding: 0;
+        text-align: center;
+    }
+    #consejos {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 650px;
+        padding: 10px 50px 10px 50px;
+    }
+}
+
+/*=============================================
+=   registrar nuevo anuncio                   =
+=============================================*/
+
+@media screen and (min-width:200px) and (max-width: 479px) {
+    #crear-anuncio input {
+        width: 90% !important;
+    }
+    #crear-anuncio select {
+        max-width: 100%;
+    }
+    #crear-anuncio label {
+        max-width: 100% !important;
+    }
+    .ubicaciondepartamento {
+        max-width: 100% !important;
+    }
+    .ubicacioncrearanunciodep{
+        max-width: 100% !important;
+    }
+    .ubicacionprovincia {
+        max-width: 100% !important;
+    }
+    .ubicacioncrearanuncioprov {
+        max-width: 100% !important;
+    }
+    .ubicaciondistrito {
+        max-width: 100% !important;
+    }
+    .ubicacioncrearanunciodis {
+        max-width: 100% !important;
+    }
+    .categoria {
+        max-width: 100% !important; 
+    }
+    .categoriacrearanuncio {
+        max-width: 100% !important;
+    }
+    .sub-categoria {
+        max-width: 100% !important;
+    }
+    .subcategoriacrearanuncio {
+        max-width: 100% !important;
+    }
+    #titulocrearanuncio {
+        width: 90% !important; 
+    }
+    #descripcioncrearanuncio{
+        width: 90% !important; 
+    }
+    #descripcionrevistacrearanuncio{
+        width: 90% !important; 
+    }
+    .marcas, .modelos{
+        max-width: 100% !important;
+        display: inline;
+    }
+    .marcacrearanuncio{
+        max-width: 100% !important;
+    }
+    .año {
+        margin-left: 0;
+
+    }
+    .modelo, .fabricacioncrearanuncio {
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+    .tipo-categoria-detalles, .tipocombustible, .tipotransmision {
+        max-width: 100% !important;
+    }
+    .contador.palabras {
+        text-align: left;
+    }
+    .tipoinmueble, .tiposeccion {
+        display: block !important;
+    }
+    .numerohabitaciones, .numerocuartosbaños, .numerocuadrados {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width: 747px) {
+    #crear-anuncio select {
+        display: block;
+    }
+    .ubicaciondepartamento, .ubicacionprovincia, .ubicaciondistrito {
+        display: block !important;
+        margin-left: 120px;
+        margin-top: -30px;
+        max-width: 100%;
+    }
+    .ubicaciondepartamento, .ubicacionprovincia, .ubicaciondistrito, select {
+        max-width: 80% !important;
+        margin-bottom: 20px;
+    }
+    #crear-anuncio .categoria {
+        display: block;
+        margin-left: 120px;
+        margin-top: -35px;
+        max-width: 80% !important;
+        text-align: left;
+    }
+    #crear-anuncio .sub-categoria {
+        display: block;
+        margin-left: 120px;
+        margin-top: -35px;
+        max-width: 80% !important;
+    }
+    #crear-anuncio .precio {
+        display: block !important;
+        max-width: 100% !important;
+    }
+    #crear-anuncio .label_tipomoneda {
+        max-width: 20%;
+    }
+
+    .tipomonedacrearanuncio {
+        display: block !important;
+        margin-left: 100px;
+        max-width: 40% !important;
+        margin-top: -40px;
+    }
+    .contador.palabras {
+        text-align: left;
+    }
+
+    .marcas, .modelos, .año {
+        display: block !important;
+        margin-left: 120px;
+        margin-top: -30px;
+        max-width: 80% !important;
+        margin-bottom: 40px !important;
+    }
+    .marcas, .modelos{
+        width: 100%;
+    }
+
+    #crear-anuncio label {
+        display: block;
+    }
+    .marcacrearanuncio {
+        max-width: 80% !important;
+    }
+
+    .tipo-categoria-detalles, .tipocombustible, .tipotransmision {
+        display: block !important;
+        margin-left: 120px;
+        margin-top: -40px;
+        margin-bottom: 50px !important;
+    }
+    .tipoinmueble, .tiposeccion {
+        display: block !important;
+        margin-left: 120px;
+        margin-top: -40px;
+        margin-bottom: 50px !important;
+    }
+    .numerohabitaciones, .numerocuartosbaños, .numerocuadrados {
+        display: block;
+        margin-left: 120px;
+        margin-top: -40px;
+        margin-bottom: 50px !important;
+    }
+    #crear-anuncio .precio .precio_input, .preciotipocrearanuncio {
+        display: block;
+        margin-left: 100px;
+        margin-top: -30px;
+        margin-bottom: 50px;
+    }
+    .preciotipocrearanuncio {
+        max-width: 40% !important;
+    }
+}
+
+@media screen and (max-width: 651px) {
+    .anuncios-por-categorias {
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       /* width: 90%; */
+       padding: 0;
+    }
+    .bloque-lista-clasificados {
+        margin: 0 10px 10px 10px;
+    }
+   .anuncios-por-categorias .campo-descripcion {
+       padding: 0;
+   }
+   .lista-clasificados-campos .campo-imagen{
+       width: 100%;
+       max-width: 100%;
+       height: auto;
+   }
+   .lista-clasificados-campos .campo-imagen .imagen {
+       display: block;
+       height: 200px;
+       width: 100%;
+   }
+   .lista-clasificados-campos .campo-codigo-revista {
+       display: block;
+       margin: 5px 0 5px 0;
+   }
+   .lista-clasificados-campos .campo-tipo-moneda{
+       padding: 0 ;
+   }
+    .ubicaciones-por-anuncio {
+        width: 100%;
+        max-width: 100%;
+    }
+    .anuncios-por-categorias {
+        width: 100%;
+        max-width: 100%;
+    }
+    .campo-titulo{
+        padding: 0 !important;
+    }
+    .ubicaciones-por-anuncio {
+        max-height:0;
+        overflow:hidden;
+        -webkit-transition: max-height 500ms ease-out;
+        -moz-transition: max-height 500ms ease-out;
+        -o-transition: max-height 500ms ease-out;
+        transition: max-height 500ms ease-out;
+     }
+     .ubicaciones-por-anuncio.desplegado{
+         max-height: 50% !important;
+         -webkit-transition: max-height 500ms ease-out;
+         -moz-transition: max-height 500ms ease-out;
+         -o-transition: max-height 500ms ease-out;
+         transition: max-height 500ms ease-out;
+      }
+    
+}
+@media screen and (max-width: 1108px) {
+    .lista-clasificados-campos .campo-titulo {
+        display: block;
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,170 @@
+[21-Jan-2019 23:08:44 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:08:50 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:08:56 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:09:01 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:09:10 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:09:37 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:09:43 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:09:56 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:10:09 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:10:14 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:10:20 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:13:50 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:13:55 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:14:02 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:14:07 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[21-Jan-2019 23:14:14 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
+[22-Jan-2019 09:07:06 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/anegociarcom/public_html/Admin/modelo/conexion.php:6
+Stack trace:
+#0 /home/anegociarcom/public_html/Admin/modelo/conexion.php(6): PDO->__construct('mysql:host=loca...', 'root', 'root1234')
+#1 /home/anegociarcom/public_html/Admin/modelo/modelo_gestor_usuarios.php(112): Conexion::conectar()
+#2 /home/anegociarcom/public_html/Admin/controlador/controlador_gestor_usuarios.php(125): GestorUsuariosModel::ingresoUsuarioAdminModel(Array, 'Tusuarios')
+#3 /home/anegociarcom/public_html/Admin/vista/modulos/ingreso.php(39): GestorUsuariosController->ingresoUsuarioAdminController()
+#4 /home/anegociarcom/public_html/Admin/controlador/controlador_enlaces.php(32): include('/home/anegociar...')
+#5 /home/anegociarcom/public_html/Admin/vista/home.php(38): EnlacesController->enlacesPaginasController()
+#6 /home/anegociarcom/public_html/Admin/controlador/controlador.php(10): include('/home/anegociar...')
+#7 /home/a in /home/anegociarcom/public_html/Admin/modelo/conexion.php on line 6
