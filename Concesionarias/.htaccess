@@ -1,0 +1,13 @@
+#Impedir que se pueda ver el listado de contenidos de un directorio
+
+Options All -Indexes
+
+#URLS AMIGABLES
+# Activar RewriteEngine
+
+RewriteEngine on
+
+RewriteRule ^(\w+)$ index.php?action=$1&id=$2
+#RewriteRule ^(.+)$ index.php?action=$1&id=$2
+
+#http://localhost/Anegociar/index.php?action=ver_clasificado&id=22

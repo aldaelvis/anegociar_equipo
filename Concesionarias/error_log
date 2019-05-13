@@ -1,0 +1,415 @@
+[24-Dec-2018 16:25:03 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:25:03 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/salir.php on line 3
+[24-Dec-2018 16:25:03 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:25:03 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:25:03 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[24-Dec-2018 16:25:11 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:25:11 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[24-Dec-2018 16:25:11 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[24-Dec-2018 16:25:16 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:25:16 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[24-Dec-2018 16:25:16 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[24-Dec-2018 16:25:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method GestorUsuariosModel::ingresoUsuarioAgenteModel() in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php:176
+Stack trace:
+#0 /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php(34): GestorUsuariosController->ingresoInmobiliariaController()
+#1 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php(21): include('/home/anegociar...')
+#2 /home/anegociarcom/public_html/Inmobiliarias/vista/home.php(60): EnlacesController->enlacesPaginasController()
+#3 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador.php(10): include('/home/anegociar...')
+#4 /home/anegociarcom/public_html/Inmobiliarias/index.php(22): MvcController->pagina()
+#5 {main}
+  thrown in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php on line 176
+[24-Dec-2018 16:27:34 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:27:34 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:27:34 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[24-Dec-2018 16:27:36 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:27:36 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/crear_anuncio.php on line 6
+[24-Dec-2018 16:27:36 America/New_York] PHP Notice:  Undefined index: user-inm in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/crear_anuncio.php on line 8
+[24-Dec-2018 16:27:40 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:27:40 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[24-Dec-2018 16:27:40 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[24-Dec-2018 16:27:42 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:27:42 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[24-Dec-2018 16:27:42 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[24-Dec-2018 16:27:50 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:27:50 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[24-Dec-2018 16:27:50 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[24-Dec-2018 16:27:50 America/New_York] PHP Deprecated:  Non-static method GestorUsuariosModel::ingresoInmobilariaModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php on line 176
+[24-Dec-2018 16:27:50 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_usuarios.php on line 77
+[24-Dec-2018 16:27:50 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php on line 196
+[24-Dec-2018 16:27:50 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:27:50 America/New_York] PHP Warning:  include(vista/modulos/pricipal.php): failed to open stream: No such file or directory in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 21
+[24-Dec-2018 16:27:50 America/New_York] PHP Warning:  include(vista/modulos/pricipal.php): failed to open stream: No such file or directory in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 21
+[24-Dec-2018 16:27:50 America/New_York] PHP Warning:  include(): Failed opening 'vista/modulos/pricipal.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 21
+[24-Dec-2018 16:28:30 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:28:30 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 2
+[24-Dec-2018 16:28:30 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method GestorUsuariosController::SaldoDisponibleClasificadoController() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php:38
+Stack trace:
+#0 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php(21): include()
+#1 /home/anegociarcom/public_html/Inmobiliarias/vista/home.php(60): EnlacesController->enlacesPaginasController()
+#2 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador.php(10): include('/home/anegociar...')
+#3 /home/anegociarcom/public_html/Inmobiliarias/index.php(22): MvcController->pagina()
+#4 {main}
+  thrown in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 38
+[24-Dec-2018 16:38:57 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:38:57 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/salir.php on line 3
+[24-Dec-2018 16:38:58 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:38:58 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:38:58 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[24-Dec-2018 16:39:03 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:39:03 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[24-Dec-2018 16:39:03 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[24-Dec-2018 16:39:09 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:39:09 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[24-Dec-2018 16:39:09 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[24-Dec-2018 16:39:09 America/New_York] PHP Deprecated:  Non-static method GestorUsuariosModel::ingresoInmobilariaModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php on line 176
+[24-Dec-2018 16:39:09 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_usuarios.php on line 77
+[24-Dec-2018 16:39:09 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php on line 196
+[24-Dec-2018 16:39:09 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:39:09 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:39:09 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[24-Dec-2018 16:39:16 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:39:16 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 2
+[24-Dec-2018 16:39:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method GestorUsuariosController::SaldoDisponibleClasificadoController() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php:38
+Stack trace:
+#0 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php(21): include()
+#1 /home/anegociarcom/public_html/Inmobiliarias/vista/home.php(60): EnlacesController->enlacesPaginasController()
+#2 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador.php(10): include('/home/anegociar...')
+#3 /home/anegociarcom/public_html/Inmobiliarias/index.php(22): MvcController->pagina()
+#4 {main}
+  thrown in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 38
+[24-Dec-2018 16:54:10 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:54:10 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[24-Dec-2018 16:54:11 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:54:11 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:54:11 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[24-Dec-2018 16:54:13 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:54:13 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:54:13 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[24-Dec-2018 16:54:14 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:54:14 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:54:14 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[24-Dec-2018 16:54:15 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:54:15 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:54:15 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[24-Dec-2018 16:54:15 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:54:15 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:54:15 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[24-Dec-2018 16:54:18 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[24-Dec-2018 16:54:18 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[24-Dec-2018 16:54:18 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:38:22 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:38:22 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:38:22 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[25-Dec-2018 17:38:22 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[25-Dec-2018 17:38:22 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:38:22 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:38:22 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:38:29 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:38:29 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[25-Dec-2018 17:38:29 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:41:18 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:41:18 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[25-Dec-2018 17:41:18 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:45:06 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:45:06 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:45:34 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[25-Dec-2018 17:45:34 America/New_York] PHP Warning:  include(temas/slider.php): failed to open stream: No such file or directory in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 9
+[25-Dec-2018 17:45:34 America/New_York] PHP Warning:  include(temas/slider.php): failed to open stream: No such file or directory in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 9
+[25-Dec-2018 17:45:34 America/New_York] PHP Warning:  include(): Failed opening 'temas/slider.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 9
+[25-Dec-2018 17:45:34 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:45:34 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:45:34 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[25-Dec-2018 17:45:34 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[25-Dec-2018 17:45:34 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:45:34 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:45:34 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:46:08 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:46:08 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:46:48 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:46:48 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:46:54 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[25-Dec-2018 17:46:54 America/New_York] PHP Warning:  include(temas/slider.php): failed to open stream: No such file or directory in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 9
+[25-Dec-2018 17:46:54 America/New_York] PHP Warning:  include(temas/slider.php): failed to open stream: No such file or directory in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 9
+[25-Dec-2018 17:46:54 America/New_York] PHP Warning:  include(): Failed opening 'temas/slider.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 9
+[25-Dec-2018 17:46:54 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:46:54 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:46:54 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[25-Dec-2018 17:46:54 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[25-Dec-2018 17:46:54 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:46:54 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:46:54 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:47:00 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:47:00 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:53:29 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[25-Dec-2018 17:53:29 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[25-Dec-2018 17:53:29 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[25-Dec-2018 17:53:29 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:53:29 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:53:29 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[25-Dec-2018 17:53:29 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[25-Dec-2018 17:53:29 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:53:29 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:53:29 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:53:31 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:53:31 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:55:42 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:55:42 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:55:57 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:55:57 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:56:10 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:56:10 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[25-Dec-2018 17:56:10 America/New_York] PHP Deprecated:  Non-static method GestorUsuariosModel::ingresoInmobilariaModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php on line 176
+[25-Dec-2018 17:56:10 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_usuarios.php on line 77
+[25-Dec-2018 17:56:10 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php on line 196
+[25-Dec-2018 17:56:10 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:56:10 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:56:10 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:56:59 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:56:59 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:56:59 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:57:03 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:57:03 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:57:03 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:57:08 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[25-Dec-2018 17:57:08 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[25-Dec-2018 17:57:08 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:57:08 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:57:08 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[25-Dec-2018 17:57:08 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[25-Dec-2018 17:57:08 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:57:08 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:57:08 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:57:15 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:57:15 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:57:15 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:57:23 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:57:23 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:57:23 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:57:28 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[25-Dec-2018 17:57:28 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[25-Dec-2018 17:57:28 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:57:28 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:57:28 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[25-Dec-2018 17:57:28 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[25-Dec-2018 17:57:28 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:57:28 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:57:28 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:57:38 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:57:38 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:57:38 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:57:56 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:57:56 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:57:56 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:58:00 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[25-Dec-2018 17:58:00 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[25-Dec-2018 17:58:00 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:58:00 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 17:58:00 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[25-Dec-2018 17:58:00 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[25-Dec-2018 17:58:00 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:58:00 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:58:00 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:58:02 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:58:02 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:58:02 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:58:02 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:58:08 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:58:08 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:58:08 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:58:08 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:58:28 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:58:28 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 17:58:28 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 17:58:32 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 17:58:32 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method GestorUsuariosController::SaldoDisponibleClasificadoController() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php:38
+Stack trace:
+#0 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php(21): include()
+#1 /home/anegociarcom/public_html/Inmobiliarias/vista/home.php(60): EnlacesController->enlacesPaginasController()
+#2 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador.php(10): include('/home/anegociar...')
+#3 /home/anegociarcom/public_html/Inmobiliarias/index.php(22): MvcController->pagina()
+#4 {main}
+  thrown in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 38
+[25-Dec-2018 18:00:38 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:00:38 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:00:38 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:00:38 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:00:46 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:00:46 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:00:46 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:00:46 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:01:28 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:01:28 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:01:28 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:01:32 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:01:32 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:01:32 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method GestorUsuariosController::SaldoDisponibleClasificadoController() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php:38
+Stack trace:
+#0 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php(21): include()
+#1 /home/anegociarcom/public_html/Inmobiliarias/vista/home.php(60): EnlacesController->enlacesPaginasController()
+#2 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador.php(10): include('/home/anegociar...')
+#3 /home/anegociarcom/public_html/Inmobiliarias/index.php(22): MvcController->pagina()
+#4 {main}
+  thrown in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 38
+[25-Dec-2018 18:01:37 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[25-Dec-2018 18:01:37 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[25-Dec-2018 18:01:37 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 18:01:37 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 18:01:37 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[25-Dec-2018 18:01:37 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[25-Dec-2018 18:01:37 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:01:37 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:01:37 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:02:21 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:02:21 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:02:21 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method GestorUsuariosController::SaldoDisponibleClasificadoController() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php:38
+Stack trace:
+#0 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php(21): include()
+#1 /home/anegociarcom/public_html/Inmobiliarias/vista/home.php(60): EnlacesController->enlacesPaginasController()
+#2 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador.php(10): include('/home/anegociar...')
+#3 /home/anegociarcom/public_html/Inmobiliarias/index.php(22): MvcController->pagina()
+#4 {main}
+  thrown in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 38
+[25-Dec-2018 18:02:27 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:02:28 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:02:28 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:02:28 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:02:36 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[25-Dec-2018 18:02:36 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[25-Dec-2018 18:02:36 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 18:02:36 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[25-Dec-2018 18:02:36 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[25-Dec-2018 18:02:36 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[25-Dec-2018 18:02:36 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:02:36 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:02:36 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:02:44 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:02:44 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:02:44 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:05:26 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:05:26 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:05:26 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:06:16 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:06:16 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:06:16 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:06:24 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:06:24 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/salir.php on line 3
+[25-Dec-2018 18:06:24 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:06:24 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[25-Dec-2018 18:06:24 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[25-Dec-2018 18:06:30 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[25-Dec-2018 18:06:30 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[25-Dec-2018 18:06:30 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 13:27:50 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[26-Dec-2018 13:27:50 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[26-Dec-2018 13:27:50 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[26-Dec-2018 13:27:50 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[26-Dec-2018 13:27:50 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[26-Dec-2018 13:27:50 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[26-Dec-2018 13:27:50 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 13:27:50 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[26-Dec-2018 13:27:50 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[26-Dec-2018 13:27:59 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 13:27:59 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/salir.php on line 3
+[26-Dec-2018 13:27:59 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 13:27:59 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[26-Dec-2018 13:27:59 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[26-Dec-2018 13:28:10 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[26-Dec-2018 13:28:10 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[26-Dec-2018 13:28:10 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[26-Dec-2018 13:28:10 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[26-Dec-2018 13:28:10 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[26-Dec-2018 13:28:10 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[26-Dec-2018 13:28:10 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 13:28:10 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[26-Dec-2018 13:28:10 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[26-Dec-2018 13:28:14 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 13:28:14 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[26-Dec-2018 13:28:14 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 13:28:24 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[26-Dec-2018 13:28:24 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[26-Dec-2018 13:28:24 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[26-Dec-2018 13:28:24 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[26-Dec-2018 13:28:24 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[26-Dec-2018 13:28:24 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[26-Dec-2018 13:28:24 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 13:28:24 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[26-Dec-2018 13:28:24 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[26-Dec-2018 13:28:31 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 13:28:31 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[26-Dec-2018 13:28:31 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 13:29:33 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 13:29:33 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[26-Dec-2018 13:29:33 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[26-Dec-2018 19:55:52 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/header.php on line 2
+[26-Dec-2018 19:55:52 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 5
+[26-Dec-2018 19:55:52 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[26-Dec-2018 19:55:52 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/vista/home.php on line 45
+[26-Dec-2018 19:55:52 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 14
+[26-Dec-2018 19:55:52 America/New_York] PHP Notice:  Undefined index: action in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 15
+[26-Dec-2018 19:55:52 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 19:55:52 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[26-Dec-2018 19:55:52 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[26-Dec-2018 19:56:04 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 19:56:04 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[26-Dec-2018 19:56:04 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 19:56:56 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 19:56:56 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[26-Dec-2018 19:56:56 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 19:58:31 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 19:58:31 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 3
+[26-Dec-2018 19:58:31 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 20:02:00 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 201
+[26-Dec-2018 20:02:02 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 201
+[26-Dec-2018 20:03:30 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:03:30 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 20:03:46 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:03:46 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[26-Dec-2018 20:03:46 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[26-Dec-2018 20:04:32 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:04:32 America/New_York] PHP Deprecated:  Non-static method GestorCategoriasModel::mostrarClasificadosPorCategoriaInmueblesModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_categorias.php on line 120
+[26-Dec-2018 20:04:32 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_categorias.php on line 131
+[26-Dec-2018 20:04:35 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:04:35 America/New_York] PHP Notice:  Undefined index: user-inm in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/crear_anuncio.php on line 8
+[26-Dec-2018 20:04:39 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:04:39 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 20:04:56 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:04:56 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 20:05:49 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:05:49 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 20:05:53 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:05:53 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 20:05:57 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:05:57 America/New_York] PHP Notice:  Undefined index: user_inmobiliaria in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/ingreso.php on line 4
+[26-Dec-2018 20:05:57 America/New_York] PHP Deprecated:  Non-static method GestorUsuariosModel::ingresoInmobilariaModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php on line 176
+[26-Dec-2018 20:05:57 America/New_York] PHP Deprecated:  Non-static method Conexion::conectar() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/modelo/modelo_gestor_usuarios.php on line 77
+[26-Dec-2018 20:05:57 America/New_York] PHP Notice:  A session had already been started - ignoring session_start() in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_gestor_usuarios.php on line 196
+[26-Dec-2018 20:05:58 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:05:58 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method GestorUsuariosController::SaldoDisponibleClasificadoController() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php:38
+Stack trace:
+#0 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php(21): include()
+#1 /home/anegociarcom/public_html/Inmobiliarias/vista/home.php(60): EnlacesController->enlacesPaginasController()
+#2 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador.php(10): include('/home/anegociar...')
+#3 /home/anegociarcom/public_html/Inmobiliarias/index.php(22): MvcController->pagina()
+#4 {main}
+  thrown in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 38
+[26-Dec-2018 20:07:49 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:07:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method GestorUsuariosController::SaldoDisponibleClasificadoController() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php:38
+Stack trace:
+#0 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php(21): include()
+#1 /home/anegociarcom/public_html/Inmobiliarias/vista/home.php(60): EnlacesController->enlacesPaginasController()
+#2 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador.php(10): include('/home/anegociar...')
+#3 /home/anegociarcom/public_html/Inmobiliarias/index.php(22): MvcController->pagina()
+#4 {main}
+  thrown in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 38
+[26-Dec-2018 20:07:51 America/New_York] PHP Deprecated:  Non-static method EnlacePaginas::enlacesPaginasModel() should not be called statically in /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php on line 20
+[26-Dec-2018 20:07:51 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method GestorUsuariosController::SaldoDisponibleClasificadoController() in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php:38
+Stack trace:
+#0 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador_enlaces.php(21): include()
+#1 /home/anegociarcom/public_html/Inmobiliarias/vista/home.php(60): EnlacesController->enlacesPaginasController()
+#2 /home/anegociarcom/public_html/Inmobiliarias/controlador/controlador.php(10): include('/home/anegociar...')
+#3 /home/anegociarcom/public_html/Inmobiliarias/index.php(22): MvcController->pagina()
+#4 {main}
+  thrown in /home/anegociarcom/public_html/Inmobiliarias/vista/modulos/principal.php on line 38
+[26-Dec-2018 20:08:12 America/New_York] PHP Parse error:  syntax error, unexpected '?>' in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 144
+[26-Dec-2018 20:08:40 America/New_York] PHP Parse error:  syntax error, unexpected '?>' in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 144
+[26-Dec-2018 20:10:50 America/New_York] PHP Parse error:  syntax error, unexpected '?>' in /home/anegociarcom/public_html/Inmobiliarias/vista/temas/navegacion.php on line 144

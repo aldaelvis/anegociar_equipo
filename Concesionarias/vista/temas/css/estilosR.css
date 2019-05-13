@@ -1,0 +1,155 @@
+/*Menu responsivo*/
+#inicio #menu-principal {
+    display: inline-block;
+    width: 100%;
+    background-color: #0079BB;
+    border-bottom: solid 3px #005991;
+    height: 53px;
+    margin-bottom: -4px;
+}
+#inicio .menu-principal {
+    margin: 0 auto;
+    max-width: 710px;
+}
+/*Strip the ul of padding and list styling*/
+#inicio #menu-principal ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position: absolute;
+}
+/*Create a horizontal list with spacing*/
+#inicio #menu-principal li {
+    display:inline-block;
+    float: left;
+    margin-right: 1px;
+}
+/*Style for menu links*/
+#inicio #menu-principal li a {
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    display:block;
+    min-width:140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    color: #fff;
+    background: #2f3036;
+    background: transparent;
+    text-decoration: none;
+}
+/*Hover state for top level links*/
+#inicio #menu-principal li:hover a {
+    background: #19c589;
+}
+/*Style for dropdown links*/
+#inicio #menu-principal li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+/*Hover state for dropdown links*/
+#inicio #menu-principal li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+/*Hide dropdown links until they are needed*/
+#inicio #menu-principal li ul {
+    display: none;
+}
+/*Make dropdown links vertical*/
+#inicio #menu-principal li ul li {
+    display: block;
+    float: none;
+}
+/*Prevent text wrapping*/
+#inicio #menu-principal li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+/*Display the dropdown on hover*/
+#inicio #menu-principal ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+/*Style 'show menu' label button and hide it by default*/
+#inicio #menu-principal .show-menu {
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: #19c589;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+/*Hide checkbox*/
+#inicio #menu-principal input[type=checkbox]{
+    display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+#inicio #menu-principal input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+/*Responsive Styles*/
+@media screen and (max-width : 760px){
+    #menu-principal {
+        height: auto;
+    }
+    /*Make dropdown links appear inline*/
+    #menu-principal ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    #menu-principal li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    #menu-principal ul li, li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    #menu-principal .show-menu {
+        display:block;
+    }
+}
+
+/*
+@media screen and (max-width: 800px) {
+    #contenedor{
+        width:100%;
+    }
+}
+*/
+
+/*@media screen and (min-width: 320px) and (max-width: 480px) {*/
+@media screen and (max-width: 320px) {
+    #header {
+        display: inline-block;
+        /* float: none; */
+        left: 0px;
+        width: 100%;
+    }
+    #header img {
+        width: 100%;
+    }
+    .menu-vender {
+        left: 0px; 
+    }
+    .contenido-categorias {
+        padding: 5px 20px 10px 20px;
+    }
+    .sub-footer {
+        padding: 00px;
+    }
+    #nuscador {
+        margin-left: 0px;
+    }
+}

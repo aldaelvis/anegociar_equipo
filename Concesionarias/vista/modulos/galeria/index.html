@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Juicebox Gallery</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" id="jb-viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="description" content="This is a Juicebox Gallery. Get yours at www.juicebox.net" />
+	<style type="text/css">
+	body {
+		margin: 0px;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="content">
+		<h1>gALERIA PRINCIPAL</h1>
+		<!--START Juicebox EMBED.-->
+		<script src="jbcore/juicebox.js"></script>
+
+		<script type="text/javascript">
+		new juicebox({
+			configUrl: 'config.php',
+			containerid:'juicebox-container',
+			// baseURL:'../full/',
+			backgroundColor:'rgba(0,0,0,.9)',
+			galleryHeight:'600',
+			galleryWidth:'708'
+		});
+		</script>
+		<div id="juicebox-container"></div>
+		<!-- END Juicebox EMBED -->
+	</div>
+</body>
+</html>
