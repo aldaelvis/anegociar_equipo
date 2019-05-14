@@ -167,9 +167,8 @@ class GestorAnunciosController
     public function guardarClasificadoController()
     {
         session_start();
-        $_SESSION["user_agente"] = true;
-        $_SESSION["usuarioAG"];
-        $idusuario = (int)$_SESSION["idusuarioAG"];
+        $_SESSION["user_concesionaria"] = true;
+        $idusuario = (int)$_SESSION["idusuarioConce"];
         $plan_web = $_SESSION['plan-crear-web-anuncio'];
         $plan_revista = $_SESSION['plan-crear-revista-anuncio'];
 
@@ -247,9 +246,13 @@ class GestorAnunciosController
                 "estado" => $en_proceso,
                 "idusuario" => $idusuario
             );
+
+            /*var_dump($clasificado);
+            var_dump($det_caracteristicas);
+            var_dump($det_ubicacion);*/
+
             //Guardar clasificado y return (id)
             $idclasificado = GestorAnunciosModel::guardarClasificadosModel($det_ubicacion, $det_caracteristicas, $clasificado);
-           //var_dump($idclasificado);
             $countfiles = count($_FILES['nombreimagen']['name']);
             if ($countfiles != 0) {
                 $ruta = "../vista/imagenes/anuncios/";

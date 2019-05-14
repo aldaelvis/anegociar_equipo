@@ -71,5 +71,15 @@ include "temas/navegacion.php";
     ?>
 </footer>
 <script type="text/javascript" src="vista/temas/js/validarRegistro.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', (e) => {
+    const alert = document.querySelector('.alerta');
+    setTimeout(() => {
+        if(alert) {
+            alert.remove();
+        }
+    }, 5000);
+})
+</script>
 </body>
 </html>

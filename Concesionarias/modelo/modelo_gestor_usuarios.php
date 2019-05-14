@@ -211,63 +211,6 @@ class GestorUsuariosModel
         $stmt->close();
     }
 
-    #------------------------------------code elvis
-    #new version, list for user last publications ()
-
-    public static function listarClasificadosPorUsuarioModel($idusuario, $pagina, $buscar, $tabla)
-    {
-        #Inicializamos el tamaño de la pagina
-        $tamaño_pagina = 5;
-        #Iniciamos en donde iniciara la pagina
-        $empezar_desde = ($pagina - 1) * $tamaño_pagina;
-        #Inicializamos el array de datos que devolvera la paginación
-        $datos = array();
-        $cn = Conexion::conectar();
-        $query = "SELECT Tclasificados. idclasificado
-        FROM $tabla 
-        INNER JOIN Tdetalles_caracteristicas_clasificados 
-        ON Tclasificados. iddetalle_caracteristica_clasificado = Tdetalles_caracteristicas_clasificados. iddetalle_caracteristica_clasificado 
-        INNER JOIN Tusuarios ON Tclasificados. idusuario = Tusuarios. idusuario WHERE
-        Tclasificados. titulo LIKE '%$buscar%'
-        AND Tclasificados. idusuario = $idusuario ";
-        $stmt = $cn->prepare($query);
-        $stmt->execute();
-        $num_filas = $stmt->rowCount();
-        $total_paginas = (int)ceil($num_filas / $tamaño_pagina);
-        $from = ($pagina * $tamaño_pagina) - $tamaño_pagina;
-        $to = ($pagina * $tamaño_pagina);
-
-        $query = "SELECT Tclasificados. idclasificado, titulo, descripcion, tipo_moneda, precio, 
-        celular, cod_revista, Tclasificados. idusuario, 
-        Tgaleria_imagenes_clasificados. idclasificado, nombreimagen , tclasificados. fechacreacion, tclasificados.estado,
-        tclasificados. precio_tipo
-        FROM $tabla INNER JOIN Tgaleria_imagenes_clasificados 
-        ON Tclasificados. idclasificado = Tgaleria_imagenes_clasificados. idclasificado 
-        INNER JOIN Tdetalles_caracteristicas_clasificados 
-        ON Tclasificados. iddetalle_caracteristica_clasificado = Tdetalles_caracteristicas_clasificados. iddetalle_caracteristica_clasificado 
-        INNER JOIN Tusuarios ON Tclasificados. idusuario = Tusuarios. idusuario 
-        WHERE Tclasificados. idclasificado = Tgaleria_imagenes_clasificados. idclasificado 
-        AND Tclasificados. titulo LIKE '%$buscar%' 
-        AND Tclasificados. idusuario = $idusuario 
-        GROUP BY Tgaleria_imagenes_clasificados. idclasificado 
-        ORDER BY tclasificados. idclasificado  DESC LIMIT $empezar_desde, $tamaño_pagina  ";
-        $stmt = $cn->prepare($query);
-        $stmt->execute();
-        $datos = $stmt->fetchAll();
-        $stmt->closeCursor();
-        return $total_array = array(
-            "datos" => $datos,
-            "paginacion" => array(
-                "total" => $num_filas,
-                "current_page" => (int)$pagina,
-                "per_page" => $tamaño_pagina,
-                "last_page" => $total_paginas,
-                "from" => $from,
-                "to" => $to,
-            )
-        );
-    }
-
     #Editar clasificado x user
     public static function editarClasificadosUserModel($datoscontrolador, $tabla)
     {
@@ -317,11 +260,13 @@ class GestorUsuariosModel
     }
 
     //Devolver los ultimos Movimientos de los clasificados x user
+    //devolver Movimientos de los clasificados
     public function movimientosModel($idusuario, $pagina, $buscar)
     {
         $PDO = Conexion::conectar();
+
         $tamaño_pagina = 10;
-        $empezar_desde = ($pagina - 1 ) * $tamaño_pagina;
+        $empezar_desde = ($pagina - 1) * $tamaño_pagina;
         $datos = array();
         $query = "SELECT tclas. cod_revista, tclas. titulo, tclas. fechacreacion, tdet_plan. idplan_revista, tplan_r. precio_plan_revista,
 		tdet_plan. idplan_web, tplan_w. precio_plan_web
@@ -333,9 +278,9 @@ class GestorUsuariosModel
         $stmt = Conexion::conectar()->prepare($query);
         $stmt->execute(array());
         $num_filas = $stmt->rowCount();
-        $total_paginas = (int) ceil($num_filas / $tamaño_pagina);
+        $total_paginas = (int)ceil($num_filas / $tamaño_pagina);
         $from = ($pagina * $tamaño_pagina) - $tamaño_pagina;
-        $to =  ($pagina * $tamaño_pagina);
+        $to = ($pagina * $tamaño_pagina);
 
         $query2 = "SELECT tclas. cod_revista, tclas. titulo, tclas. fechacreacion, tdet_plan. idplan_revista, tplan_r. precio_plan_revista,
 		tdet_plan. idplan_web, tplan_w. precio_plan_web
@@ -348,12 +293,11 @@ class GestorUsuariosModel
         $stmt = $PDO->prepare($query2);
         $stmt->execute(array());
         $datos = $stmt->fetchAll();
-        $stmt->closeCursor();
         return $arrayTotal = array(
             "datos" => $datos,
             "paginacion" => array(
                 "total" => $num_filas,
-                "current_page" => (int) $pagina,
+                "current_page" => (int)$pagina,
                 "per_page" => $tamaño_pagina,
                 "last_page" => $total_paginas,
                 "from" => $from,
@@ -362,7 +306,7 @@ class GestorUsuariosModel
         );
     }
 
-    #sacar el total de los movimientos
+    #TOTAL DE MOVIMIENTOS
     public function totalMovimientos($idusuario)
     {
         $PDO = Conexion::conectar();
@@ -371,12 +315,92 @@ class GestorUsuariosModel
 		ON tdet_plan.iddetalle_plan_clasificado = tclas.iddetalle_plan_clasificado
 		LEFT JOIN tplanes_revista tplan_r ON tdet_plan.idplan_revista = tplan_r.idplan_revista
 		LEFT JOIN tplanes_web tplan_w ON tdet_plan.idplan_web = tplan_w.idplan_web
-		WHERE tclas.idusuario = $idusuario ";
+		WHERE tclas.idusuario = $idusuario";
         $stmt = $PDO->prepare($query);
         $stmt->execute();
         $datos = $stmt->fetchAll();
-        $stmt->closeCursor();
         return $datos;
+    }
+
+    #SALDO USUARIO
+    #-------------------------------------
+    public function saldoUsuarioModel($datosModel, $tabla)
+    {
+
+        $stmt = Conexion::conectar()->prepare("SELECT Tusu. idusuario, usuario, password, intentos, saldo_usuario FROM $tabla Tusu INNER JOIN Tusuarios_roles ON Tusu. idusuario = Tusuarios_roles. idusuario INNER JOIN Troles ON Tusuarios_roles. idrol = Troles. idrol WHERE nombre_rol = 'agente' AND Tusu. idusuario = :usu");
+
+        $stmt->bindParam(":usu", $datosModel, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetch();
+
+        $stmt->close();
+    }
+
+    //ULTIMOS CAMBIOS
+    public static function reducirSaldoUsuario($id, $cantidad)
+    {
+        $cn = Conexion::conectar();
+        $query = "UPDATE tusuarios SET saldo_usuario = :cantidad WHERE idusuario = :idusuario";
+        $stmt = $cn->prepare($query);
+        $stmt->bindParam(':cantidad', $cantidad, PDO::PARAM_STR);
+        $stmt->bindParam(':idusuario', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
+    ##Paginacion de registros con los ultimos clasificacdos
+    public function listarClasificadosModel($idusuario, $pagina, $buscar)
+    {
+        #Inicializamos el tamaño de la pagina
+        $tamaño_pagina = 8;
+        #Iniciamos en donde iniciara la pagina
+        $empezar_desde = ($pagina - 1) * $tamaño_pagina;
+        #Inicializamos el array de datos que devolvera la paginación
+        $datos = array();
+
+
+        $query = "SELECT Tclasificados. idclasificado
+		FROM Tclasificados INNER JOIN Tgaleria_imagenes_clasificados
+		ON Tclasificados. idclasificado = Tgaleria_imagenes_clasificados. idclasificado
+		INNER JOIN Tdetalles_caracteristicas_clasificados
+		ON Tclasificados. iddetalle_caracteristica_clasificado = Tdetalles_caracteristicas_clasificados. iddetalle_caracteristica_clasificado
+		INNER JOIN Tusuarios ON Tclasificados. idusuario = Tusuarios. idusuario
+		WHERE Tclasificados. titulo LIKE '%$buscar%' AND Tclasificados. idclasificado = Tgaleria_imagenes_clasificados. idclasificado
+		AND Tclasificados. idusuario = $idusuario GROUP BY Tgaleria_imagenes_clasificados. idclasificado";
+        $stmt = Conexion::conectar()->prepare($query);
+        $stmt->execute(array());
+        $num_filas = $stmt->rowCount();
+        $total_paginas = (int)ceil($num_filas / $tamaño_pagina);
+        $from = ($pagina * $tamaño_pagina) - $tamaño_pagina;
+        $to = ($pagina * $tamaño_pagina);
+
+        $query2 = "SELECT Tclasificados. idclasificado, titulo, descripcion, tipo_moneda, precio, celular, cod_revista,
+			Tclasificados. fechacreacion, Tclasificados. precio_tipo ,Tclasificados. estado, tcat.nombre_categoria,
+		Tclasificados. idusuario, Tgaleria_imagenes_clasificados. idclasificado, nombreimagen
+		FROM Tclasificados INNER JOIN Tgaleria_imagenes_clasificados
+		ON Tclasificados. idclasificado = Tgaleria_imagenes_clasificados. idclasificado
+		INNER JOIN Tdetalles_caracteristicas_clasificados
+		ON Tclasificados. iddetalle_caracteristica_clasificado = Tdetalles_caracteristicas_clasificados. iddetalle_caracteristica_clasificado
+		INNER JOIN tcategorias tcat ON tdetalles_caracteristicas_clasificados.idcategoria = tcat. idcategoria
+		INNER JOIN Tusuarios ON Tclasificados. idusuario = Tusuarios. idusuario
+		WHERE Tclasificados. titulo LIKE '%$buscar%' AND Tclasificados. idclasificado = Tgaleria_imagenes_clasificados. idclasificado
+		AND Tclasificados. idusuario = $idusuario GROUP BY Tgaleria_imagenes_clasificados. idclasificado
+		ORDER BY Tclasificados. idclasificado DESC LIMIT $empezar_desde, $tamaño_pagina ";
+        $stmt = Conexion::conectar()->prepare($query2);
+        $stmt->execute();
+        $datos = $stmt->fetchAll();
+
+        return $total_array = array(
+            "datos" => $datos,
+            "paginacion" => array(
+                "total" => $num_filas,
+                "current_page" => (int)$pagina,
+                "per_page" => $tamaño_pagina,
+                "last_page" => $total_paginas,
+                "from" => $from,
+                "to" => $to,
+            )
+        );
     }
 
 

@@ -56,6 +56,7 @@ if (isset($_POST["validarEmail"])) {
 
 
 switch ($_GET["op"]) {
+    #---------(para planes)
     case 'mostrarPlanesWeb':
         $dataWeb = GestorPlanesController::mostrarPlanesWebController();
         echo json_encode($dataWeb);

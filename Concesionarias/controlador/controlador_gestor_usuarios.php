@@ -697,6 +697,7 @@ class GestorUsuariosController
             "precio_tipo" => $_POST['precio_tipo'],
             "imagen_actual" => $_POST['imagen_actual']
         );
+        
         $rpta = GestorUsuariosModel::editarClasificadosUserModel($datosControlador, 'tclasificados');
         return $rpta;
     }
@@ -716,38 +717,47 @@ class GestorUsuariosController
         return $rpta;
     }
 
-    public function movimientosController($pagina, $buscar)
-    {
-        session_start();
-        $idusuario = $_SESSION["idusuarioConce"];
-        $arrayTotal = array();
-        $rpta = GestorUsuariosModel::movimientosModel($idusuario, $pagina, $buscar);
-        foreach ($rpta["datos"] as $key => $value) {
-            $total_pagado = $value["precio_plan_revista"] + $value["precio_plan_web"];
-            $fecha = explode("-", $value["fechacreacion"]);
-            $fecha_invertida = $fecha[2] . " / " . $fecha[1] . " / " . $fecha[0];
-            $data[] = array(
-                "cod_revista" => $value["cod_revista"],
-                "titulo" => $value["titulo"],
-                "fechacreacion" => $fecha_invertida,
-                "precio_plan_revista" => $value["precio_plan_revista"],
-                "precio_plan_web" => $value["precio_plan_web"],
-                "total_pagado" => $total_pagado
-            );
-        }
+    //LISTAR CLASIFICADOS X USUARIOS
+	public function listarClasificadosController($pagina, $buscar)
+	{
+		session_start();
+		$idusuario = $_SESSION["idusuarioConce"];
+		$arrayPaginacion = GestorUsuariosModel::listarClasificadosModel($idusuario, $pagina, $buscar);
+		return $arrayPaginacion;
+	}
 
-        $datosTotal = GestorUsuariosModel::totalMovimientos($idusuario);
-        $total_final = 0.0;
-        foreach ($datosTotal as $key => $item) {
-            $total_pagado = $item["precio_plan_revista"] + $item["precio_plan_web"];
-            $total_final += $total_pagado;
-        }
+	public function movimientosController($pagina, $buscar)
+	{
+		session_start();
+		$idusuario = $_SESSION["idusuarioConce"];
+		$arrayTotal = array();
 
-        return $arrayTotal = array(
-            "data" => $data,
-            "paginacion" => $rpta["paginacion"],
-            "total_final" => $total_final
-        );
-    }
+		$rpta = GestorUsuariosModel::movimientosModel($idusuario, $pagina, $buscar);
+		foreach ($rpta["datos"] as $key => $value) {
+			$total_pagado = $value["precio_plan_revista"] + $value["precio_plan_web"];
+			setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
+			$fecha_invertida =  strftime("%d de %B de %Y", strtotime($value["fechacreacion"]));
+			$data[] = array(
+				"cod_revista" => $value["cod_revista"],
+				"titulo" => $value["titulo"],
+				"fechacreacion" => $fecha_invertida,
+				"precio_plan_revista" => $value["precio_plan_revista"],
+				"precio_plan_web" => $value["precio_plan_web"],
+				"total_pagado" => $total_pagado
+			);
+		}
+
+		$datosTotal = GestorUsuariosModel::totalMovimientos($idusuario);
+		$total_final = 0.0;
+		foreach($datosTotal as $key=> $item){
+			$total_pagado = $item["precio_plan_revista"] + $item["precio_plan_web"];
+			$total_final += $total_pagado;
+		}
+		return $arrayTotal = array(
+			"data" => $data,
+			"paginacion" => $rpta["paginacion"],
+			"total_final" => $total_final
+		);
+	}
 }
 

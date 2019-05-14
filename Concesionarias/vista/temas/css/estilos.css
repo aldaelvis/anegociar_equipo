@@ -351,10 +351,12 @@ body {
     margin: 0px 10px 0px 10px;
     display: inline-block;
     width: 100%;
-    max-width: 220px;
+    max-width: 210px;
     padding: 0px 20px 0px 20px;
     vertical-align: top;
     padding-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
 }
 .categoria-plan h1 {
     font-size: 18px;
@@ -381,7 +383,7 @@ body {
     color: white;
 }
 .descripcion-plan {
-    min-height: 205px;
+    min-height: 150px;
 }
 .descripcion-plan ul {
     padding-left: 20px;
@@ -396,7 +398,7 @@ body {
 .nombre-plan {
     background-image: url(../img/fondo-tipo-plan.png);
     display: inline-block;
-    width: 150px;
+    width: 140px;
     height: 130px;
     position: relative;
     top: -34px;
@@ -514,7 +516,7 @@ body {
     vertical-align: middle;
     background: black;
 }
-.lista-clasificados-campos .campo-imagen .imagen img {
+.lista-clasificados-campos .campo-imagen  img {
     /* width: 100%; */
     /* max-width: 100%; */
     /* height: 100%; */
@@ -1613,9 +1615,7 @@ a.enlace-micuenta:hover, a.enlaca-salir:hover {
     text-decoration: none;
     color: #191C26;
 }
-.menu-usuario-agente a:hover {
-    /*background-color: #CC673B;*/
-}
+
 .menu-usuario-agente ul li ul {
     display: none;
 }
@@ -1629,7 +1629,51 @@ a.enlace-micuenta:hover, a.enlaca-salir:hover {
     background-clip: padding-box;
     background: white;
 }
+/*==== ./ULTIMOS MOVIMIENTOS ====*/
+.contenedor-movimientos {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    width: 80%;
+    margin: 0 auto;
+}
+.common-table {
+    width: 100%;
+    font-size: 14px;
+    color: #8e8f90;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
+.common-table th {
+    font-size: 12px;
+    text-align: left;
+    font-weight: 700;
+    padding: 8px 1px;
+    background-color: #eee;
+}
+
+.buscador-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-buscador input {
+    padding: 4px;
+    border: 1px solid #d2d6de;
+    margin: 15px 0;
+    float: right;
+}
+
+.contenedor-buscador input:focus {
+    outline: 0;
+    border-color: #3c8dbc;
+    box-shadow: none;
+}
 
 /*=====  End of Section comment block  ======*/
 /*=============================================
@@ -1651,8 +1695,21 @@ a.enlace-micuenta:hover, a.enlaca-salir:hover {
 }
 
 /*========================================
-=            Paginacion global            =
+=            Estilos globales           =
 ========================================*/
+
+.alerta {
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+.error {
+    background-color: #F2DEDE;
+    color: #A94442;
+}
 
 /* Paginacion estilos */
 .paginacion {
@@ -1674,7 +1731,7 @@ a.enlace-micuenta:hover, a.enlaca-salir:hover {
 .page-link{
     position: relative;
     display: block;
-    padding: .5rem .75rem;
+    padding: .1rem 0.50rem;
     margin-left: -1px;
     line-height: 1.25;
     color: #007bff;
@@ -1688,3 +1745,194 @@ a.enlace-micuenta:hover, a.enlaca-salir:hover {
     background-color: #007bff;
     border-color: #007bff;
 }
+
+.buscador-contenedor {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.buscador-contenedor label {
+    font-weight: 600;
+}
+
+
+.btn-activar {
+    background: #53A853;
+}
+
+.btn-desactivar {
+    background: #C83F39;
+}
+
+.active-modal {
+    width: 100px;
+    background: #0053CC;
+}
+
+.pop-up {
+    position: absolute;
+    top: 0;
+    left: -500em;
+}
+
+.pop-up:target {
+    position: static;
+    left: 0;
+}
+
+.popBox {
+    background-color: #fff;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 10%;
+    bottom: 30%;
+    z-index: 6;
+    border: 1px solid #3a3a3a;
+    /*border-radius: 0.25rem;*/
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    max-height: 70%;
+}
+
+:target .popBox {
+    position: fixed;
+    opacity: 1;
+}
+
+.popBox:hover {
+    box-shadow: 0 0 0.5rem 0.5rem rba(255, 0, 0, 0.5);
+}
+
+.lightbox {
+    display: none;
+    text-indent: -200em;
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+}
+
+:target .lightbox {
+    display: block;
+}
+
+.close:link,
+.close:visited {
+    position: absolute;
+    top: -0.75em;
+    right: -0.75em;
+    display: block;
+    width: 2em;
+    height: 2em;
+    line-height: 1.8;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 .5rem .5rem rba(0, 0, 0, .5);
+}
+
+.close:before {
+    content: "X";
+}
+
+.close:hover,
+.close:active,
+.close:focus {
+    box-shadow: 0 0 .5rem .5rem rba(255, 0, 0, .5);
+    background-color: #c00;
+    color: #fff;
+}
+
+.close span {
+    text-indent: -200em;
+    display: block;
+}
+
+.popScroll {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    overflow-y: auto;
+    *overflow-y: scroll;
+    padding-right: 0.5em;
+}
+
+footer {
+    /*position: fixed;*/
+    width: 100%;
+    text-align: center;
+}
+
+/* Items */
+.placa {
+    background: #6C757D;
+    color: #fff;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 160px;
+    z-index: 1;
+    border: 1px solid #ddd;
+    opacity: 0.9;
+}
+
+.dropdown-content > a {
+    color: #337AB7;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block !important;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    margin-top: 6px;
+    border: none;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    /*width: 100px;*/
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-success {
+    background-color: #f4f4f4;
+    color: #000;
+    border-color: #ddd;
+}
+
+/*========================================
+=            /.Estilos globales         =
+========================================*/
