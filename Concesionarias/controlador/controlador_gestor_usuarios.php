@@ -160,9 +160,10 @@ class GestorUsuariosController
         session_start();
         if (isset($_POST["usuarioIngreso"])) {
             $encriptar = crypt($_POST["passwordIngreso"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
-            $datosController = array("usuario" => $_POST["usuarioIngreso"],
-                #"password"=>$_POST["passwordIngreso"]);
-                "password" => $encriptar
+            $datosController = array(
+                "usuario" => $_POST["usuarioIngreso"],
+                "password"=>$_POST["passwordIngreso"]
+                // "password" => $encriptar
             );
 
             $respuesta = GestorUsuariosModel::ingresoConcesionariaModel($datosController, "Tusuarios");
@@ -614,45 +615,40 @@ class GestorUsuariosController
         $_SESSION["user_concesionaria"] = true;
         $idusuario = $_SESSION["idusuarioConce"];
         date_default_timezone_set("America/Lima");
-        $data = GestorUsuariosModel::mostrarInformacionUserModel($idusuario, "Tusuarios");
+        $data = GestorUsuariosModel::mostrarInformacionUserModel($idusuario, "tusuarios");
         echo '
-            <fieldset style="border: 1px solid #dddddd">
-                <legend style="font-weight: 600">Saldos</legend>
-                <p>Saldo actual:  <span style="color: #00a651; font-weight: 600">S/.' . $data["saldo_usuario"] . '</span></p>
-                <div class="enlace-recarga-saldo">
-            <form action="saldo_agente" method="post">
-                <button type="submit" name="cat" value="vehiculos" class="btn-link">Recargar Saldo</button>
-            </form>
-        </div>
-             </fieldset>
-             <div class="contenedor-datos">
-             <fieldset style="" class="datos-personales">
-                <legend style="font-weight: 600">Datos personales</legend>
-                <p>Nombre:  <span>' . $data["nombres"] . '</span></p>
-                <p>Apellidos:  <span>' . $data["apellidos"] . '</span></p>
-                <p>Pais:  <span>' . $data["pais"] . '</span></p>
-                <p>Departamento:  <span>' . $data["departamento"] . '</span></p>
-                <p>Provincia:  <span>' . $data["provincia"] . '</span></p>
-                <p>Distrito:  <span>' . $data["distrito"] . '</span></p>
-                <p>Dirección:  <span>' . $data["direccion"] . '</span></p>
-                <div class="enlace-recarga-saldo">
-                    <form action="#" method="post">
-                        <button type="submit" name="cat" value="vehiculos" class="btn-info">Actualizar información</button>
+        <div class="contenedor"> 
+            <div class="foto">
+                <img src="" alt="No hay imagen" />
+            </div>
+            <div class="informacion-content">
+                <h2>Bienvenido '. $_SESSION['usuarioConce'].'</h2>
+                <div class="informacion">
+                    <label>Saldo actual</label>
+                    <div class="informacion-info">
+                    <span style="color: #00a651; font-weight: 600">S/.' . $data["saldo_usuario"] . '</span>
+                    <form action="saldo_agente" method="post">
+                        <button type="submit" name="cat" value="vehiculos" class="btn-link">Recargar Saldo</button>
                     </form>
+                    </div> 
                 </div>
-             </fieldset>
-                <fieldset class="content-cuenta">
-                    <legend style="font-weight: 600">Cuenta</legend>
-                    <h5>Último ingreso: <strong>2018-07-23</strong> a las <strong>' . date("h") . ':' . date("i") . ':' . date("s") . ' ' . date("a") . '</strong></h5>
+                <div class="informacion">
+                    <label>Nombre</label>
+                    <div class="informacion-info">'. $data["nombres"].'</div> 
+                </div>
+                <div class="informacion">
+                    <label>Ultimo ingreso</label>
+                    <div class="informacion-info">
+                    <strong>2018-07-23</strong> a las <strong>' . date("h") . ':' . date("i") . ':' . date("s") . ' ' . date("a") . '</strong>
                     <div class="enlace-recarga-saldo">
                         <button class="cerrar-sesion">
                             <a href="salir"><i class="fa fa-sign-out" aria-hidden="true"></i> Terminar
                                 Sesión</a>
                         </button>
-                </fieldset>
+                    </div> 
+                </div>
             </div>
-            </div>
-            ';
+        </div> ';
     }
 
     #Listar clasificados por usuarios (paginado, búsqueda)
@@ -760,4 +756,3 @@ class GestorUsuariosController
 		);
 	}
 }
-

@@ -61,7 +61,7 @@ class GestorUsuariosModel
     {
         $stmt = Conexion::conectar()->prepare("SELECT Tusu. idusuario, usuario, password, intentos, nombre_rol FROM 
         $tabla Tusu INNER JOIN Tusuarios_roles ON Tusu. idusuario = Tusuarios_roles. idusuario 
-        INNER JOIN Troles ON Tusuarios_roles. idrol = Troles. idrol WHERE nombre_rol = 'concesionaria' AND usuario = :usuario");
+        INNER JOIN Troles ON Tusuarios_roles. idrol = Troles. idrol WHERE nombre_rol = 'concesionarias' AND usuario = :usuario");
 
         $stmt->bindParam(":usuario", $datosModel["usuario"], PDO::PARAM_STR);
         $stmt->execute();
@@ -199,11 +199,10 @@ class GestorUsuariosModel
     #MOSTRAR INFORMACION SOBRE EL USUARIO
     public static function mostrarInformacionUserModel($datosModel, $tabla)
     {
-        $query = "SELECT Tusu.idusuario, Tusu.usuario, Tusu.saldo_usuario, Tusu.email, Tusu.nombres,Tusu.apellidos,Tusu.foto, 
-                  Tusu.pais,Tusu.departamento,Tusu.provincia,Tusu.distrito,Tusu.direccion FROM $tabla Tusu 
+        $query = "SELECT Tusu.idusuario, Tusu.usuario, Tusu.saldo_usuario, Tusu.email, Tusu.nombres,Tusu.apellidos,Tusu.foto FROM $tabla Tusu 
                   INNER JOIN Tusuarios_roles ON Tusu. idusuario = Tusuarios_roles. idusuario 
                   INNER JOIN Troles ON Tusuarios_roles. idrol = Troles. idrol 
-                  WHERE nombre_rol = 'concesionaria' AND Tusu. idusuario = :usu";
+                  WHERE nombre_rol = 'concesionarias' AND Tusu. idusuario = :usu";
         $stmt = Conexion::conectar()->prepare($query);
         $stmt->bindParam(":usu", $datosModel, PDO::PARAM_INT);
         $stmt->execute();
@@ -327,13 +326,14 @@ class GestorUsuariosModel
     public function saldoUsuarioModel($datosModel, $tabla)
     {
 
-        $stmt = Conexion::conectar()->prepare("SELECT Tusu. idusuario, usuario, password, intentos, saldo_usuario FROM $tabla Tusu INNER JOIN Tusuarios_roles ON Tusu. idusuario = Tusuarios_roles. idusuario INNER JOIN Troles ON Tusuarios_roles. idrol = Troles. idrol WHERE nombre_rol = 'agente' AND Tusu. idusuario = :usu");
+        $stmt = Conexion::conectar()->prepare("SELECT Tusu. idusuario, usuario, password, intentos, saldo_usuario 
+        FROM $tabla Tusu INNER JOIN Tusuarios_roles ON Tusu. idusuario = Tusuarios_roles. idusuario 
+        INNER JOIN Troles ON Tusuarios_roles. idrol = Troles. idrol 
+        WHERE nombre_rol ='concesionarias' AND Tusu. idusuario = :usu");
 
         $stmt->bindParam(":usu", $datosModel, PDO::PARAM_INT);
         $stmt->execute();
-
         return $stmt->fetch();
-
         $stmt->close();
     }
 

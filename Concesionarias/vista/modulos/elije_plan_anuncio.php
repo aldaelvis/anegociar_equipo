@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-if (!$_SESSION["user_agente"]) {
+if (!$_SESSION["user_concesionaria"]) {
     header('location:ingreso');
 }
 
@@ -23,7 +23,7 @@ if (isset($_POST['idclasificado']) && isset($_POST['categoria'])) {
                 ?>
                 <div class="titulo-plan">
                     <div class="titulo">
-                        <h1>Planes Revista (<?php echo $capturaCategoria; ?>)</h1>
+                        <h2>Selecione un plan web</h2>
                     </div>
                 </div>
                 <form method="post" action="elije_plan_anuncio">

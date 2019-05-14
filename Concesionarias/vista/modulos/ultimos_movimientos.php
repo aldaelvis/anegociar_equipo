@@ -6,9 +6,10 @@ if (!$_SESSION["user_concesionaria"]) {
 }
 ?>
 <div id="bloque-principal-agente">
-    <h1 class="page-title">Saldos y <span style="color: #2196F3;">Movimientos</span></h1>
     <div id="app5">
+    <h2 class="page-title" style="text-align: center;">Saldos y <span style="color: #2196F3;">Movimientos</span></h2>
         <div class="contenedor-movimientos">
+        
             <div class="contenedor-buscador">
                 <input type="text" id="buscar" v-model="buscar" @keyup="listarMovimientos(1, buscar)"
                        placeholder="Buscar movimientos">
