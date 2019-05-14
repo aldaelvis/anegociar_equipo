@@ -167,9 +167,13 @@ class GestorAnunciosController
     public function guardarClasificadoController()
     {
         session_start();
-        $_SESSION["user_concesionaria"] = true;
-        $idusuario = $_SESSION["idusuarioConce"];
-        $clasificado_Gratis_Activo = 1;
+        $_SESSION["user_agente"] = true;
+        $_SESSION["usuarioAG"];
+        $idusuario = (int)$_SESSION["idusuarioAG"];
+        $plan_web = $_SESSION['plan-crear-web-anuncio'];
+        $plan_revista = $_SESSION['plan-crear-revista-anuncio'];
+
+        $en_proceso = 2;
         function getRandomCode()
         {
             $an = "123456789ABCDEFGHIJKLMNPQRSTUVWXYZ";
@@ -184,210 +188,94 @@ class GestorAnunciosController
 
         $cod_Revista = getRandomCode();
         $Pais = 1;
-        //------------------------
-        if ($_SESSION['plan-crear-web-anuncio'] == "GRATIS" &&
-            $_SESSION['plan-crear-revista-anuncio'] == "GRATIS" ||
-            $_SESSION['plan-crear-web-anuncio'] == "GRATIS" && empty($_SESSION['plan-crear-revista-anuncio']) ||
-            empty($_SESSION['plan-crear-web-anuncio']) && $_SESSION['plan-crear-revista-anuncio'] == "GRATIS") {
-            $plan = "GRATIS";
-        } else {
-            $plan = "PAGO";
-        }
+
         if (isset($_POST["guardaranuncio"])) {
-            if ($plan == "GRATIS") {
-                //obtener el ID del plan web que se selecciono
-                $datos_planes_web = GestorPlanesModel::mostrarPlanWebModel($_SESSION['plan-crear-web-anuncio'],
-                    $_SESSION['categorias-crear-anuncio'], "Tplanes_web");
-                $idplan_web = $datos_planes_web['idplan_web'] ? $datos_planes_web['idplan_web'] : null;
+            //Guardar el ununcio sin plan.
+            if (!empty($_POST["categoriacrearanuncio"])) {
+                $nombre_categoria = ucwords($_POST["categoriacrearanuncio"]);
+                $respuestaIdcategoria = GestorCategoriasModel::verificarIdCategoriaModel($nombre_categoria, "tcategorias");
+                $categoria_id = $respuestaIdcategoria["idcategoria"];
+            }
+            if (!empty($_POST["modelo"])) {
+                $nombre_modelo = $_POST["modelo"];
+                $respuestaIdmodelo = GestorCategoriasModel::verificarIdModeloModel($nombre_modelo, "tmodelos");
+                $modelo_id = $respuestaIdmodelo["idmodelo"];
+            }
+            if (!empty($_POST["condicion"]) == 'Enable') {
+                $condicion = 'Nuevo';
+            } else if (!empty($_POST["condicion"]) == 'Disable') {
+                $condicion = 'Usado';
+            }
 
-                //obtener el Id del plan revista que se selecciono
-                $datos_planes_revista = GestorPlanesModel::mostrarPlanRevistaModel($_SESSION['plan-crear-revista-anuncio'],
-                    $_SESSION['categorias-crear-anuncio'], "Tplanes_revista");
-                $idplan_revista = $datos_planes_revista['idplan_revista'] ? $datos_planes_revista['idplan_revista'] : null;
+            //Detalles de la ubicación
+            $det_ubicacion = array(
+                "idpais" => $Pais,
+                "iddepartamento" => $_POST["ubicacioncrearanunciodep"],
+                "idprovincia" => $_POST["ubicacioncrearanuncioprov"],
+                "iddistrito" => $_POST["ubicacioncrearanunciodis"]
+            );
 
-                if (!empty($_POST["categoriacrearanuncio"])) {
-                    $Nombre_Categoria = $_POST["categoriacrearanuncio"];
-                    $respuestaIdcategoria = GestorCategoriasModel::verificarIdCategoriaModel($Nombre_Categoria, "Tcategorias");
-                    $Idcategoria = $respuestaIdcategoria["idcategoria"];
+            //Caracteristicas del clasificado
+            $det_caracteristicas = array(
+                "idcategoria" => $categoria_id,
+                "idsubcategoria" => $_POST["subcategoriacrearanuncio"],
+                "idmarca" => $_POST["marcacrearanuncio"],
+                "idmodelo" => $modelo_id,
+
+                "fabricacion_vehiculo" => $_POST["fabricacioncrearanuncio"],
+                "tipo_modelo_vehiculo" => $_POST["tipomodelocrearanuncio"],
+                "tipo_combustible" => $_POST["tipocombustiblecrearanuncio"],
+                "tipo_transmision" => $_POST["tipotransmisioncrearanuncio"],
+                "condicion_vehiculo" => $condicion,
+                "kilometraje_vehiculo" => $_POST["kilometraje"],
+
+                "tipo_operacion_inmueble" => $_POST["tipoinmueblecrearanuncio"],
+                "tipo_categoria_inmueble" => $_POST["tiposeccioncrearanuncio"],
+                "nro_habitaciones" => $_POST["numerohabitacionescrearanuncio"],
+                "nro_servicios_higienicos" => $_POST["numerocuartosbañoscrearanuncio"],
+                "metros_cuandrados_inmuebles" => $_POST["metros"]
+            );
+
+            $clasificado = array(
+                "titulo" => $_POST["titulocrearanuncio"],
+                "descripcion" => $_POST["descripcioncrearanuncio"] . "...",
+                "tipo_moneda" => $_POST["tipomonedacrearanuncio"],
+                "precio" => $_POST["preciocrearanuncio"],
+                "celular" => $_POST["celularcrearanuncio"],
+                "precio_tipo" => $_POST["preciotipocrearanuncio"],
+                "cod_revista" => $cod_Revista,
+                "estado" => $en_proceso,
+                "idusuario" => $idusuario
+            );
+            //Guardar clasificado y return (id)
+            $idclasificado = GestorAnunciosModel::guardarClasificadosModel($det_ubicacion, $det_caracteristicas, $clasificado);
+           //var_dump($idclasificado);
+            $countfiles = count($_FILES['nombreimagen']['name']);
+            if ($countfiles != 0) {
+                $ruta = "../vista/imagenes/anuncios/";
+                for ($i = 0; $i < $countfiles; $i++) {
+                    $imagen = $_FILES['nombreimagen']['name'][$i];
+                    $extension = pathinfo($imagen, PATHINFO_EXTENSION);
+                    $nuevo_nombre = $idclasificado . ' - ' . 'Anegociar - ' . $_SESSION['cat'] . ' - ';
+                    $new = mt_rand(100, 999);
+                    $newfilename = $nuevo_nombre . $new . '.' . $extension;
+
+                    move_uploaded_file($_FILES['nombreimagen']['tmp_name'][$i], $ruta . $newfilename);
+
+                    $imagenes = array(
+                        "nombreimagen" => $newfilename,
+                        "idclasificado" => $idclasificado
+                    );
+
+                    $rpta = GestorAnunciosModel::guardarGaleriaImagenClasificadosModel($imagenes, "Tgaleria_imagenes_clasificados");
                 }
-                //Verificando la condicion
-                if ($_POST["condicion"] == 'Enable') {
-                    $condicion = 'Nuevo';
-                } elseif ($_POST["condicion"] == 'Disable') {
-                    $condicion = 'Usado';
-                } else {
-                }
-                #$condicion = 'Ninguno';
-                $det_ubicacion = array(
-                    "idpais" => $Pais,
-                    "iddepartamento" => (int) $_POST["ubicacioncrearanunciodep"],
-                    "idprovincia" => (int)$_POST["ubicacioncrearanuncioprov"],
-                    "iddistrito" => (int) $_POST["ubicacioncrearanunciodis"]
-                );
-                $det_caracteristicas = array(
-                    "idcategoria" => (int) $Idcategoria,
-                    "idsubcategoria" => (int) $_POST["subcategoriacrearanuncio"],
-
-                    "idmarca" => $_POST["marcacrearanuncio"],
-                    "idmodelo" => $_POST["modelocrearanuncio"],
-                    "fabricacion_vehiculo" => $_POST["fabricacioncrearanuncio"],
-                    "tipo_modelo_vehiculo" => $_POST["tipomodelocrearanuncio"],
-                    "tipo_combustible" => $_POST["tipocombustiblecrearanuncio"],
-                    "tipo_transmision" => $_POST["tipotransmisioncrearanuncio"],
-                    "condicion_vehiculo" => $condicion,
-                    "kilometraje_vehiculo" => $_POST["kilometraje"],
-
-                );
-
-                $clasificado = array(
-                    "titulo" => $_POST["titulocrearanuncio"],
-                    "descripcion" => $_POST["descripcioncrearanuncio"] . "...",
-                    "tipo_moneda" => $_POST["tipomonedacrearanuncio"],
-                    "precio" => (double)$_POST["preciocrearanuncio"],
-                    "celular" => $_POST["celularcrearanuncio"],
-                    "descripcion_revista" => $_POST["descripcionrevistacrearanuncio"],
-                    "precio_tipo" => $_POST["preciotipocrearanuncio"],
-                    "cod_revista" => $cod_Revista,
-                    "mostrar_en_revista" => $_POST["mostrar_revista"],
-                    "estado" => $clasificado_Gratis_Activo,
-                    "idusuario" => $idusuario
-                );
-                $det_planes = array(
-                    "idplan_web" => $idplan_web,
-                    "idplan_revista" => $idplan_revista
-                );
-                $idclasificado = GestorAnunciosModel::guardarClasificadoModelo($det_ubicacion, $det_caracteristicas, $det_planes, $clasificado);
-                if(is_numeric($idclasificado)) {
-                    //imagenes
-                    $countfiles = count($_FILES['nombreimagen']['name']);
-                    $ruta = "../vista/imagenes/anuncios/";
-                    for ($i = 0; $i < $countfiles; $i++) {
-                        $imagen = $_FILES['nombreimagen']['name'][$i];
-                        $extension = pathinfo($imagen, PATHINFO_EXTENSION);
-                        $nuevo_nombre = $idclasificado . ' - ' . 'Anegociar - ' . $_SESSION['cat'] . ' - ';
-                        $new = mt_rand(100, 999);
-                        $newfilename = $nuevo_nombre . $new . '.' . $extension;
-                        move_uploaded_file($_FILES['nombreimagen']['tmp_name'][$i], $ruta . $newfilename);
-                        $imagenes = array(
-                            "nombreimagen" => $newfilename,
-                            "idclasificado" => $idclasificado
-                        );
-
-                        $respuesta = GestorAnunciosModel::guardarGaleriaImagenClasificadosModel($imagenes, "tgaleria_imagenes_clasificados");
-                        if ($respuesta == "OK") {
-                            header("location:ultimas_publicaciones");
-                        } else {
-                            echo $respuesta;
-                        }
-                    }
-                }else {
-                    echo $idclasificado;
-                }
-
-            } elseif ($plan == "PAGO") {
-                //obtener el ID del plan web que se selecciono
-                $datos_planes_web = GestorPlanesModel::mostrarPlanWebModel($_SESSION['plan-crear-web-anuncio'], $_SESSION['categorias-crear-anuncio'], "Tplanes_web");
-                $idplan_web = $datos_planes_web['idplan_web'] ? $datos_planes_web['idplan_web'] : null;
-
-                //obtener el Id del plan revista que se selecciono
-                $datos_planes_revista = GestorPlanesModel::mostrarPlanRevistaModel($_SESSION['plan-crear-revista-anuncio'], $_SESSION['categorias-crear-anuncio'], "Tplanes_revista");
-                $idplan_revista = $datos_planes_revista['idplan_revista'] ? $datos_planes_revista['idplan_revista'] : null;
-
-                if (!empty($_POST["categoriacrearanuncio"])) {
-                    $Nombre_Categoria = $_POST["categoriacrearanuncio"];
-                    $respuestaIdcategoria = GestorCategoriasModel::verificarIdCategoriaModel($Nombre_Categoria, "Tcategorias");
-                    $Idcategoria = $respuestaIdcategoria["idcategoria"];
-                }
-                if (!empty($_POST["modelo"])) {
-                    $Nombre_Modelo = $_POST["modelo"];
-                    $respuestaIdmodelo = GestorCategoriasModel::verificarIdModeloModel($Nombre_Modelo, "Tmodelos");
-                    $Idmodelo = $respuestaIdmodelo["idmodelo"];
-                } else {
-                    #echo "el modelo es";
-                }
-                //Verificando la condicion
-                if ($_POST["condicion"] == 'Enable') {
-                    $condicion = 'Nuevo';
-                } elseif ($_POST["condicion"] == 'Disable') {
-                    $condicion = 'Usado';
-                } else {
-                }
-                //Verificando si el anuncio saldra en la revista
-                if ($_POST["yesno"] == 'Si') {
-                    $mostrar_en_revista = 'Si';
-                } elseif ($_POST["yesno"] == 'No') {
-                    $mostrar_en_revista = 'No';
-                } else {
-                    $mostrar_en_revista = 'No';
-                }
-
-                $det_ubicacion = array(
-                    "idpais" => $Pais,
-                    "iddepartamento" => $_POST["ubicacioncrearanunciodep"],
-                    "idprovincia" => $_POST["ubicacioncrearanuncioprov"],
-                    "iddistrito" => $_POST["ubicacioncrearanunciodis"]
-                );
-
-                $det_caracteristicas = array(
-                    "idcategoria" => $Idcategoria,
-                    "idsubcategoria" => $_POST["subcategoriacrearanuncio"],
-
-                    "idmarca" => $_POST["marcacrearanuncio"],
-                    "idmodelo" => $_POST["modelocrearanuncio"],
-                    "fabricacion_vehiculo" => $_POST["fabricacioncrearanuncio"],
-                    "tipo_modelo_vehiculo" => $_POST["tipomodelocrearanuncio"],
-                    "tipo_combustible" => $_POST["tipocombustiblecrearanuncio"],
-                    "tipo_transmision" => $_POST["tipotransmisioncrearanuncio"],
-                    "condicion_vehiculo" => $condicion,
-                    "kilometraje_vehiculo" => $_POST["kilometraje"],
-
-                );
-
-                $clasificado = array(
-                    "titulo" => $_POST["titulocrearanuncio"],
-                    "descripcion" => $_POST["descripcioncrearanuncio"] . "...",
-                    "tipo_moneda" => $_POST["tipomonedacrearanuncio"],
-                    "precio" => $_POST["preciocrearanuncio"],
-                    "celular" => $_POST["celularcrearanuncio"],
-                    "descripcion_revista" => $_POST["descripcionrevistacrearanuncio"],
-                    "precio_tipo" => $_POST["preciotipocrearanuncio"],
-                    "cod_revista" => $cod_Revista,
-                    "mostrar_en_revista" => $mostrar_en_revista,
-                    "estado" => $clasificado_Gratis_Activo,
-                    "idusuario" => $idusuario
-                );
-
-
-                $det_planes = array(
-                    "idplan_web" => $idplan_web,
-                    "idplan_revista" => $idplan_revista
-                );
-                $idclasificado = GestorAnunciosModel::guardarClasificadoModelo($det_ubicacion, $det_caracteristicas, $det_planes, $clasificado);
-                if(is_numeric($idclasificado)){
-                    $countfiles = count($_FILES['nombreimagen']['name']);
-                    $ruta = "../vista/imagenes/anuncios/";
-                    for ($i = 0; $i < $countfiles; $i++) {
-                        $imagen = $_FILES['nombreimagen']['name'][$i];
-                        $extension = pathinfo($imagen, PATHINFO_EXTENSION);
-                        $nuevo_nombre = $idclasificado . ' - ' . 'Anegociar - ' . $_SESSION['cat'] . ' - ';
-                        $new = mt_rand(100, 999);
-                        $newfilename = $nuevo_nombre . $new . '.' . $extension;
-                        move_uploaded_file($_FILES['nombreimagen']['tmp_name'][$i], $ruta . $newfilename);
-                        $imagenes = array(
-                            "nombreimagen" => $newfilename,
-                            "idclasificado" => $idclasificado
-                        );
-                        $respuesta = GestorAnunciosModel::guardarGaleriaImagenClasificadosModel($imagenes, "tgaleria_imagenes_clasificados");
-                        if ($respuesta == "OK") {
-                            header("location:ultimas_publicaciones");
-                        } else {
-                            echo $respuesta;
-                        }
-                    }
-                }
-
-            } elseif ($this->verificarPlan() == "NO") {
-                echo 'No tiene saldo';
+            }
+            if ($rpta == "OK") {
+                header("location:elije_plan_anuncio");
+                //$_SESSION['ID_CLASIFICADO'] = $idclasificado;
+                //cookie
+                //setcookie('IDCLASIFICADO', $idclasificado, time() + (60*2) );
+                $_SESSION['IDCLASIFICADO'] = $idclasificado;
             }
         }
     }

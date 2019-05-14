@@ -257,6 +257,7 @@ body {
     width: 100%;
     max-width: 807px;
     margin: auto;
+    text-align: center;
 }
 .elije-tipo-anuncio h1, .otras-categorias h1{
     color: #005980;
@@ -1643,6 +1644,10 @@ a.enlace-micuenta:hover, a.enlaca-salir:hover {
 }
 #header-principal #logo img {
     width: 100%;
+}
+
+.elije-tipo-anuncio > .categoria {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5)
 }
 
 /*========================================

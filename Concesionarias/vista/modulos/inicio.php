@@ -37,6 +37,7 @@
 </div>
 <div id="bloque-contenedor-categoria-vehiculos">
     <h1>Ultimos Vehiculos</h1>
+	<?php var_dump($_SESSION); ?>
     <div class="bloque-contenedor-categoria-vehiculos">
         <?php
         $categorias_y_subcategorias_inicio = new GestorCategoriasController();

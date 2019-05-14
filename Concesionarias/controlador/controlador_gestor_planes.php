@@ -4,74 +4,119 @@ class GestorPlanesController
 {
     #ELIJE TU PLAN DE ACUERO ALA CATEGORIA
     #------------------------------------
-    public function vistaAnunciosPlanesController()
+    public function mostrarPlanesController()
     {
-        $datosController = $_SESSION["val1"];
-        $respuesta = GestorPlanesModel::mostrarClasificadosPlanesCategoriaModel($datosController, "tplanes_web");
-        foreach ($respuesta as $row => $item) {
-            $Nombres_Planes = $item["nombre_plan"];
-            $Categorias_Planes = $item["categoria_plan"];
-
+        $$categoria = $_SESSION["cat"];
+        $trevista = GestorPlanesModel::mostrarPlanesRevistaModelo($categoria, 'tplanes_revista');
+        $tweb = GestorPlanesModel::mostrarClasificadosPlanesCategoriaModel($categoria, 'tplanes_web');
+        foreach ($trevista as $row => $item) {
+            $nombre_plan = $item['nombre_plan_revista'];
+            $categoria_planes = $item['categoria_plan_revista'];
             echo '<div class="planes-anuncio">' .
-                '<div class="categoria-plan">' . '<h1>' . $Categorias_Planes . '</h1>' . '</div>' .
-                '<div class="nombre-plan">' . '<h2>' . $Nombres_Planes . '</h2>' . '</div>' .
-                '<div class="precio-plan">' . '<h3>s/.' . $item["precio_plan"] . '</h3>' . '</div>' .
+                '<div class="categoria-plan">' . '<h1>' . $categoria_planes . '</h1>' . '</div>' .
+                '<div class="nombre-plan">' . '<h2>' . $nombre_plan . '</h2>' . '</div>' .
+                '<div class="precio-plan">' . '<h3>s/.' . $item["precio_plan_revista"] . '</h3>' . '</div>' .
                 '<div class="descripcion-plan"><ul>';
-            $descripcion_plan = $item["descripcion_plan"];
-            $descripcion_plan = explode(",", $descripcion_plan);
-
-            foreach ($descripcion_plan as $x => $value) {
-                echo
-                    '<li>' . $value . '</li>';
+            $descripcion = $item['descripcion_plan_revista'];
+            $descripcion_plan = explode(',', $descripcion);
+            foreach ($descripcion_plan as $key => $value) {
+                echo '<li>' . $value . '</li>';
             }
-            echo '</ul></div>' .
-                '<div class="enlace-crear-anuncio">';
-            if (($Nombres_Planes = $Nombres_Planes) && ($Categorias_Planes = $Categorias_Planes)) {
+            echo '</ul></div>
+				<div class="enlace-crear-anuncio">';
+            if (($nombre_plan == $nombre_plan) && ($categoria_planes == $categoria_planes)) {
                 echo '
-					<form method="post">
-                        <button type="submit" name="cat-plan" value="' . $Categorias_Planes . '|' . $Nombres_Planes . '" class="btn-link">Continuar</button>
-                    </form>
-                	';
+						<input type="radio" name="planSeleccionadoRevista" v-model="plan"
+						value="' . $nombre_plan . '">';
             }
             echo '</div>' . '</div>';
         }
+        echo '<div class="nodeseo-plan">
+				<label class="checkbox-plan">
+					<input type="checkbox" v-model="nodeseoweb">
+					Deseo el plan web
+				</label>
+			</div> <br />';
+        foreach ($tweb as $row => $item) {
+            $nombre_plan = $item['nombre_plan_web'];
+            $categoria_planes = $item['categoria_plan_web'];
+            echo '
+			<div class="planes-anuncio" v-if="nodeseoweb == true">' .
+                '<div class="categoria-plan">' . '<h1>' . $categoria_planes . '</h1>' . '</div>' .
+                '<div class="nombre-plan">' . '<h2>' . $nombre_plan . '</h2>' . '</div>' .
+                '<div class="precio-plan">' . '<h3>s/.' . $item["precio_plan_web"] . '</h3>' . '</div>' .
+                '<div class="descripcion-plan"><ul>';
+            $descripcion = $item['descripcion_plan_web'];
+            $descripcion_plan = explode(',', $descripcion);
+            foreach ($descripcion_plan as $key => $value) {
+                echo '<li>' . $value . '</li>';
+            }
+            echo '</ul></div>
+				<div class="enlace-crear-anuncio">';
+            if (($nombre_plan == $nombre_plan) && ($categoria_planes == $categoria_planes)) {
+                echo '<input type="radio" name="planSeleccionadoWeb"
+						value="' . $nombre_plan . '">';
+            }
+            echo '</div>' . '</div>';
+        }
+        echo '
+		';
     }
 
-    #Elvis---------------------------------------------
-
-    #ELIJE TU PLAN DE ACUERDO ALA CATEGORIA
-    #--------------------------------------------------
-    public static function mostrarPlanesWebPorCategoriaControlador(){
+    public static function mostrarPreviewClasificadoController()
+    {
         session_start();
-        $categoria = $_SESSION['cat'];
-        $categoria = strtoupper($categoria);
-        $rpta = GestorPlanesModel::mostrarPlanesWebPorCategoriaModel($categoria, 'Tplanes_web');
-        foreach ($rpta as $key => $value) {
-            $data[] = array(
-                "idplan_web" => $value["idplan_web"],
-                "nombre_plan_web" => $value["nombre_plan_web"],
-                "descripcion_plan_web" => $value["descripcion_plan_web"],
-                "categoria_plan_web" => $value["categoria_plan_web"],
-                "precio_plan_web" => $value["precio_plan_web"]
-            );
+        if (isset($_SESSION['IDCLASIFICADO'])) {
+            $idclasificado = $_SESSION['IDCLASIFICADO'];
         }
-        return json_encode($data);
+        $rpta = GestorPlanesModel::mostrarPreviewClasificadoModel($idclasificado);
+        return $rpta;
     }
 
-    public static function mostrarPlanesRevistaPorCategoriaControlador(){
+    //Activar el clasificado segun el plan que se hay seleccionado
+    public static function activarClasificadoController()
+    {
         session_start();
-        $categoria = $_SESSION['cat'];
-        $categoria = strtoupper($categoria);
-        $rpta = GestorPlanesModel::mostrarPlanesRevistaPorCategoriaModel($categoria, 'Tplanes_revista');
-        foreach ($rpta as $key => $value) {
-            $data[] = array(
-                "idplan_revista" => $value["idplan_revista"],
-                "nombre_plan_revista" => $value["nombre_plan_revista"],
-                "descripcion_plan_revista" => $value["descripcion_plan_revista"],
-                "categoria_plan_revista" => $value["categoria_plan_revista"],
-                "precio_plan_revista" => $value["precio_plan_revista"]
+        if (isset($_POST['planSeleccionadoWeb']) || isset($_POST['planSeleccionadoRevista'])) {
+            $idusuario = $_SESSION["idusuarioAG"];
+            //obtener el ID del plan web que se selecciono
+            $datos_planes_web =
+                GestorPlanesModel::mostrarPlanWebModel($_POST['planSeleccionadoWeb'], $_SESSION["cat"], "Tplanes_web");
+            $idplan_web = $datos_planes_web['idplan_web'];
+            $precio_web = $datos_planes_web['precio_plan_web'];
+
+            //obtener el Id del plan revista que se selecciono
+            $datos_planes_revista =
+                GestorPlanesModel::mostrarPlanRevistaModel($_POST['planSeleccionadoRevista'], $_SESSION["cat"], "Tplanes_revista");
+            $idplan_revista = $datos_planes_revista['idplan_revista'];
+            $precio_revista = $datos_planes_revista['precio_plan_revista'];
+
+            //Sumar los precio para el descuento
+            $datos_usuario = GestorUsuariosModel::saldoUsuarioModel($idusuario, "tusuarios");
+            $total_saldo_usuario = $datos_usuario["saldo_usuario"];
+            $total_compra = (double)$precio_web + (double)$precio_revista;
+            $nuevo_saldo = $total_saldo_usuario - $total_compra;
+            //Fin operaciones
+
+            $idclasificado = $_SESSION['IDCLASIFICADO'];
+            $datosController = array(
+                "idplan_web" => $idplan_web,
+                "idplan_revista" => $idplan_revista,
+                "idclasificado" => $idclasificado,
+                "estado" => 1,
+                "descripcion" => $_POST['descripcion_revista'],
+                "mostrar_en_revista" => 'Si'
             );
+
+            var_dump($datosController);
+            //Actualizar informacion descripcion revista
+            $rpta = GestorPlanesModel::activarClasificadoModelo($datosController, 'tdetalles_planes_clasificados');
+            if ($rpta == "OK") {
+                //Mandamos a llamar la funcion reducir
+                GestorUsuariosModel::reducirSaldoUsuario($idusuario, $nuevo_saldo);
+                unset($_SESSION['IDCLASIFICADO']);
+                header('Location:ultimas_publicaciones');
+            }
         }
-        return json_encode($data);
     }
 }

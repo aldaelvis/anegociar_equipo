@@ -99,18 +99,12 @@ class GestorUsuariosController{
 		  	$respuesta = GestorUsuariosModel::activarRegistroUsuarioModel($id, "Tusuarios");
 
 			if($respuesta == "success"){
-
-				#echo "<br/>se activo correctamente";
 				header("location:activacion_exitosa");
-
 			}
 			else{
-
 				echo "<br/>no se activo correctamente<br />";
-				#cho $respuesta;
 			}
 		}
-
 		else{
 			echo "<br/>Los datos no coninciden<br />";
 		}

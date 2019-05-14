@@ -163,51 +163,82 @@ class GestorAnunciosModel
 
     #GUARDAR ARTICULO
     #------------------------------------------------------------
-    public function guardarClasificadosModel($datosModel, $tabla)
+    public function guardarClasificadosModel($ubicacion, $caracteristicasClasificado, $clasificado)
     {
-
-        #$stmt = Conexion::conectar()->prepare("INSERT INTO tclasificados (titulo) VALUES (:titulo)");
-
         $PDO = Conexion::conectar();
-        $stmt = $PDO->prepare("INSERT INTO $tabla (titulo, descripcion, tipo_moneda, precio, celular, descripcion_revista, precio_tipo, cod_revista, estado, /*idgaleria_imagen_clasificado,*/ iddetalle_caracteristica_clasificado, iddetalle_ubicacion_clasificado, idusuario) VALUES (:titulo, :descripcion, :tipo_moneda, :precio, :celular, :descripcion_revista, :precio_tipo, :cod_revista, :estado, /* :idgaleria_imagen_clasificado,*/:iddetalle_caracteristica_clasificado, :iddetalle_ubicacion_clasificado, :idusuario)");
+        $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $PDO->beginTransaction();
+        try {
+            $query1 = "INSERT INTO Tdetalles_ubicaciones_clasificados (idpais, iddepartamento, idprovincia, iddistrito) VALUES (:idpais, :iddepartamento, :idprovincia, :iddistrito /*:idclasificados*/)";
+            $stmt = $PDO->prepare($query1);
 
-        $stmt->bindParam(":titulo", $datosModel["titulo"], PDO::PARAM_STR);
-        $stmt->bindParam(":descripcion", $datosModel["descripcion"], PDO::PARAM_STR);
-        #$stmt -> bindParam(":imagen", $datosModel["imagen"], PDO::PARAM_STR);
-        $stmt->bindParam(":tipo_moneda", $datosModel["tipo_moneda"], PDO::PARAM_STR);
-        $stmt->bindParam(":precio", $datosModel["precio"], PDO::PARAM_STR);
-        $stmt->bindParam(":celular", $datosModel["celular"], PDO::PARAM_STR);
-        $stmt->bindParam(":descripcion_revista", $datosModel["descripcion_revista"], PDO::PARAM_STR);
-        $stmt->bindParam(":precio_tipo", $datosModel["precio_tipo"], PDO::PARAM_STR);
-        $stmt->bindParam(":cod_revista", $datosModel["cod_revista"], PDO::PARAM_STR);
-        $stmt->bindParam(":estado", $datosModel["estado"], PDO::PARAM_STR);
-        #$stmt -> bindParam(":idgaleria_imagen_clasificado", $datosModel["idgaleria_imagen_clasificado"], PDO::PARAM_INT);
-        $stmt->bindParam(":iddetalle_caracteristica_clasificado", $datosModel["iddetalle_caracteristica_clasificado"], PDO::PARAM_INT);
-        $stmt->bindParam(":iddetalle_ubicacion_clasificado", $datosModel["iddetalle_ubicacion_clasificado"], PDO::PARAM_INT);
-        #$stmt -> bindParam(":idpais", $datosModel["idpais"], PDO::PARAM_STR);
-        $stmt->bindParam(":idusuario", $datosModel["idusuario"], PDO::PARAM_INT);
+            $stmt->bindParam(":idpais", $ubicacion["idpais"], PDO::PARAM_INT);
+            $stmt->bindParam(":iddepartamento", $ubicacion["iddepartamento"], PDO::PARAM_INT);
+            $stmt->bindParam(":idprovincia", $ubicacion["idprovincia"], PDO::PARAM_INT);
+            $stmt->bindParam(":iddistrito", $ubicacion["iddistrito"], PDO::PARAM_INT);
+            $stmt->execute();
+            $det_idubicacion = $PDO->lastInsertId();
 
-        if ($stmt->execute()) {
-            $workorderid = $PDO->lastInsertId();
-            return $workorderid;
-            #return "success";
-        } else {
+            $query2 = "INSERT INTO Tdetalles_caracteristicas_clasificados (idcategoria, idsubcategoria, idmarca, idmodelo, fabricacion_vehiculo, tipo_modelo_vehiculo, tipo_combustible, tipo_transmision, condicion_vehiculo, kilometraje_vehiculo, tipo_operacion_inmueble, tipo_categoria_inmueble, nro_habitaciones, nro_servicios_higienicos, metros_cuandrados_inmuebles /* idclasificados*/)
+			VALUES (:idcategoria, :idsubcategoria, :idmarca, :idmodelo, :fabricacion_vehiculo, :tipo_modelo_vehiculo, :tipo_combustible, :tipo_transmision, :condicion_vehiculo, :kilometraje_vehiculo, :tipo_operacion_inmueble, :tipo_categoria_inmueble, :nro_habitaciones, :nro_servicios_higienicos, :metros_cuandrados_inmuebles /*:idclasificados*/)";
+            $stmt = $PDO->prepare($query2);
 
-            return "error";
+            $stmt->bindParam(":idcategoria", $caracteristicasClasificado["idcategoria"], PDO::PARAM_INT);
+            $stmt->bindParam(":idsubcategoria", $caracteristicasClasificado["idsubcategoria"], PDO::PARAM_INT);
+
+            $stmt->bindParam(":idmarca", $caracteristicasClasificado["idmarca"], PDO::PARAM_INT);
+            $stmt->bindParam(":idmodelo", $caracteristicasClasificado["idmodelo"], PDO::PARAM_INT);
+
+            $stmt->bindParam(":fabricacion_vehiculo", $caracteristicasClasificado["fabricacion_vehiculo"], PDO::PARAM_INT);
+            $stmt->bindParam(":tipo_modelo_vehiculo", $caracteristicasClasificado["tipo_modelo_vehiculo"], PDO::PARAM_STR);
+            $stmt->bindParam(":tipo_combustible", $caracteristicasClasificado["tipo_combustible"], PDO::PARAM_STR);
+            $stmt->bindParam(":tipo_transmision", $caracteristicasClasificado["tipo_transmision"], PDO::PARAM_STR);
+            $stmt->bindParam(":condicion_vehiculo", $caracteristicasClasificado["condicion_vehiculo"], PDO::PARAM_STR);
+            $stmt->bindParam(":kilometraje_vehiculo", $caracteristicasClasificado["kilometraje_vehiculo"], PDO::PARAM_STR);
+
+            $stmt->bindParam(":tipo_operacion_inmueble", $caracteristicasClasificado["tipo_operacion_inmueble"], PDO::PARAM_STR);
+            $stmt->bindParam(":tipo_categoria_inmueble", $caracteristicasClasificado["tipo_categoria_inmueble"], PDO::PARAM_STR);
+            $stmt->bindParam(":nro_habitaciones", $caracteristicasClasificado["nro_habitaciones"], PDO::PARAM_INT);
+            $stmt->bindParam(":nro_servicios_higienicos", $caracteristicasClasificado["nro_servicios_higienicos"], PDO::PARAM_INT);
+            $stmt->bindParam(":metros_cuandrados_inmuebles", $caracteristicasClasificado["metros_cuandrados_inmuebles"], PDO::PARAM_INT);
+            $stmt->execute();
+            $det_idcaracteristicas = $PDO->lastInsertId();
+
+            $query3 = "INSERT INTO Tclasificados(titulo, descripcion, tipo_moneda, precio, celular, descripcion_revista, precio_tipo,
+			cod_revista,fechacreacion, mostrar_en_revista, estado,iddetalle_caracteristica_clasificado,
+			iddetalle_ubicacion_clasificado, idusuario)
+			VALUES (:titulo, :descripcion, :tipo_moneda, :precio, :celular, :descripcion_revista,
+			:precio_tipo, :cod_revista, curdate() ,:mostrar_en_revista, :estado,:iddetalle_caracteristica_clasificado,
+			:iddetalle_ubicacion_clasificado, :idusuario)";
+            $stmt = $PDO->prepare($query3);
+            $stmt->bindParam(":titulo", $clasificado["titulo"], PDO::PARAM_STR);
+            $stmt->bindParam(":descripcion", $clasificado["descripcion"], PDO::PARAM_STR);
+            $stmt->bindParam(":tipo_moneda", $clasificado["tipo_moneda"], PDO::PARAM_STR);
+            $stmt->bindParam(":precio", $clasificado["precio"], PDO::PARAM_STR);
+            $stmt->bindParam(":celular", $clasificado["celular"], PDO::PARAM_STR);
+            $stmt->bindParam(":descripcion_revista", $clasificado["descripcion_revista"], PDO::PARAM_STR);
+            $stmt->bindParam(":precio_tipo", $clasificado["precio_tipo"], PDO::PARAM_STR);
+            $stmt->bindParam(":cod_revista", $clasificado["cod_revista"], PDO::PARAM_STR);
+            $stmt->bindParam(":mostrar_en_revista", $clasificado["mostrar_en_revista"], PDO::PARAM_STR);
+            $stmt->bindParam(":estado", $clasificado["estado"], PDO::PARAM_STR);
+            $stmt->bindParam(":iddetalle_caracteristica_clasificado", $det_idcaracteristicas, PDO::PARAM_INT);
+            $stmt->bindParam(":iddetalle_ubicacion_clasificado", $det_idubicacion, PDO::PARAM_INT);
+            $stmt->bindParam(":idusuario", $clasificado["idusuario"], PDO::PARAM_INT);
+            $stmt->execute();
+            $idclasificado = $PDO->lastInsertId();
+
+            $PDO->commit();
+            return $idclasificado;
+        } catch (Exception $e) {
+            $PDO->rollBack();
+            print_r($e->getMessage());
         }
-
-        $stmt->close();
-
     }
-
-
-
 
     #Recuperar ID CLASIFICADOS PARA LA GUARDAR LA GALERIA DE IMAGENES
     #------------------------------------------------------------
     public function RecuperarIDGaleriaImagenClasificadosModel($tabla)
     {
-
         $stmt = Conexion::conectar()->prepare("SELECT idgaleria_imagen_clasificado, nombreimagen FROM $tabla");
 
         $stmt->execute();
@@ -221,39 +252,27 @@ class GestorAnunciosModel
     public function MostarGaleriaImagenClasificadosModel($datosModel, $tabla)
     {
 
-        $stmt = Conexion::conectar()->prepare("SELECT TClas. idclasificado, titulo, descripcion, precio, celular, nombreimagen, TGalClas. idclasificado, idgaleria_imagen_clasificado FROM  $tabla TClas INNER JOIN Tgaleria_imagenes_clasificados TGalClas ON TClas. idclasificado = TGalClas. idclasificado WHERE TClas. idclasificado = :id");
-
-        //$stmt->setFetchMode(PDO::FETCH_ASSOC);
-
+        $stmt = Conexion::conectar()->prepare("SELECT TClas. idclasificado, titulo, descripcion, precio, celular, nombreimagen, TGalClas. idclasificado, idgaleria_imagen_clasificado 
+        FROM  $tabla TClas INNER JOIN Tgaleria_imagenes_clasificados TGalClas 
+        ON TClas. idclasificado = TGalClas. idclasificado WHERE TClas. idclasificado = :id");
         $stmt->bindParam(":id", $datosModel, PDO::PARAM_INT);
-
         $stmt->execute();
-
         return $stmt->fetchAll();
-
-        #return $stmt->fetch();
-
         $stmt->close();
-
     }
 
     #MOSTRAR UN SOLO CLASIFICADO
     #------------------------------------------------------
     public function mostrarClasificadosModel($datosModel, $tabla)
     {
-
-        #$stmt = Conexion::conectar()->prepare("SELECT idclasificado, titulo, descripcion, tipo_moneda, precio, celular FROM $tabla WHERE idclasificado = :id");
-
-        #$stmt = Conexion::conectar()->prepare("SELECT TClas. idclasificado, titulo, descripcion, precio, celular, nombreimagen, TGalClas. idclasificado FROM  Tclasificados TClas INNER JOIN Tgaleria_imagenes_clasificados TGalClas ON TClas. idclasificado = TGalClas. idclasificado WHERE TClas. idclasificado = :id");
-
-        #$stmt = Conexion::conectar()->prepare("	SELECT TGalClas. idclasificado, titulo, descripcion, precio, celular, nombreimagen, TClas. idclasificado FROM Tgaleria_imagenes_clasificados TGalClas INNER JOIN Tclasificados TClas	ON TGalClas. idclasificado = TClas. idclasificado WHERE TClas. idclasificado = :id");
-
-        $stmt = Conexion::conectar()->prepare("SELECT */*TGalClas. idclasificado, titulo, descripcion, precio, celular, nombreimagen, TClas. idclasificado */FROM Tgaleria_imagenes_clasificados TGalClas INNER JOIN Tclasificados TClas ON TGalClas. idclasificado = TClas. idclasificado INNER JOIN Tdetalles_caracteristicas_clasificados TDetCarClas ON TDetCarClas. iddetalle_caracteristica_clasificado = TClas. iddetalle_caracteristica_clasificado INNER JOIN Tdetalles_ubicaciones_clasificados TDetUbiClas ON TClas. iddetalle_ubicacion_clasificado = TDetUbiClas. iddetalle_ubicacion_clasificado INNER JOIN Tpaises TPais ON TDetUbiClas. idpais = TPais. idpais INNER JOIN Tdepartamentos TDep ON TDetUbiClas. iddepartamento = TDep. iddepartamento INNER JOIN Tprovincias TPro ON TDetUbiClas. idprovincia = TPro. idprovincia INNER JOIN Tdistritos TDis ON TDetUbiClas. iddistrito = TDis. iddistrito WHERE TClas. idclasificado = :id");
-
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM Tgaleria_imagenes_clasificados TGalClas 
+        INNER JOIN Tclasificados TClas ON TGalClas. idclasificado = TClas. idclasificado 
+        INNER JOIN Tdetalles_caracteristicas_clasificados TDetCarClas 
+        ON TDetCarClas. iddetalle_caracteristica_clasificado = TClas. iddetalle_caracteristica_clasificado 
+        INNER JOIN Tdetalles_ubicaciones_clasificados TDetUbiClas ON TClas. iddetalle_ubicacion_clasificado = TDetUbiClas. iddetalle_ubicacion_clasificado INNER JOIN Tpaises TPais ON TDetUbiClas. idpais = TPais. idpais INNER JOIN Tdepartamentos TDep ON TDetUbiClas. iddepartamento = TDep. iddepartamento INNER JOIN Tprovincias TPro ON TDetUbiClas. idprovincia = TPro. idprovincia 
+        INNER JOIN Tdistritos TDis ON TDetUbiClas. iddistrito = TDis. iddistrito WHERE TClas. idclasificado = :id");
         $stmt->bindParam(":id", $datosModel, PDO::PARAM_INT);
-
         $stmt->execute();
-
         return $stmt->fetch();
 
         $stmt->close();
