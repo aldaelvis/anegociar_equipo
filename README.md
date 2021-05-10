@@ -1,2 +1,2 @@
 # Anegociar Equipo
-Project big
+Proyecto para la revista Anegociar Perú
